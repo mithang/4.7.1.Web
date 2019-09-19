@@ -2,6 +2,8 @@
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using MediHub.Touchee.Authorization;
+using MediHub.Touchee.Products;
+using MediHub.Touchee.Products.Dto;
 
 namespace MediHub.Touchee
 {
@@ -12,6 +14,12 @@ namespace MediHub.Touchee
     {
         public override void PreInitialize()
         {
+            Configuration.Modules.AbpAutoMapper().Configurators.Add(config =>
+            {
+                config.CreateMap<CreateProductDto, Product>()
+                        .ForMember(u => u.Name, options => options.MapFrom(input => input.Name))
+                      .ForMember(u => u.Quantity, options => options.MapFrom(input => input.Quantity));
+            });
             Configuration.Authorization.Providers.Add<ToucheeAuthorizationProvider>();
         }
 

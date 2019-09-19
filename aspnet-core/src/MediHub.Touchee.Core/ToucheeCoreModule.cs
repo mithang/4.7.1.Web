@@ -8,6 +8,7 @@ using MediHub.Touchee.Authorization.Users;
 using MediHub.Touchee.Configuration;
 using MediHub.Touchee.Localization;
 using MediHub.Touchee.MultiTenancy;
+using MediHub.Touchee.Products;
 using MediHub.Touchee.Timing;
 
 namespace MediHub.Touchee
@@ -23,6 +24,7 @@ namespace MediHub.Touchee
             Configuration.Modules.Zero().EntityTypes.Tenant = typeof(Tenant);
             Configuration.Modules.Zero().EntityTypes.Role = typeof(Role);
             Configuration.Modules.Zero().EntityTypes.User = typeof(User);
+
 
             ToucheeLocalizationConfigurer.Configure(Configuration.Localization);
 

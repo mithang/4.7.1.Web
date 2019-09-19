@@ -2,9 +2,9 @@
 using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
 
-namespace MediHub.Touchee.Products
+namespace MediHub.Touchee.Products.Dto
 {
-    [AutoMapFrom(typeof(Product))]
+    [AutoMapTo(typeof(Product))]
     public class ProductDto:EntityDto<int>
     {
         public string Name { get; set; }
