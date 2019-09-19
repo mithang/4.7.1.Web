@@ -6,6 +6,7 @@ using Abp.Application.Services.Dto;
 using Abp.Collections.Extensions;
 using Abp.Domain.Repositories;
 using Abp.Domain.Uow;
+using Castle.Core.Logging;
 using MediHub.Touchee.Products;
 using MediHub.Touchee.Products.Dto;
 
@@ -15,8 +16,9 @@ namespace MediHub.Touchee.Tasks
     {
         private readonly IUnitOfWorkManager _unitOfWorkManager;
         private readonly IRepository<Product> _productRepository;
-
         private readonly IRepository<Task> _taskRepository;
+
+        public ILogger Logger { get; set; }
 
         public TaskAppService(IRepository<Task> repository, IUnitOfWorkManager unitOfWorkManager, IRepository<Product> productRepository)
             : base(repository)
@@ -25,6 +27,8 @@ namespace MediHub.Touchee.Tasks
             _unitOfWorkManager = unitOfWorkManager;
             _productRepository = productRepository;
             _taskRepository = repository;
+
+            Logger = NullLogger.Instance;
         }
 
         protected override IQueryable<Task> CreateFilteredQuery(GetAllTasksInput input)
@@ -46,7 +50,7 @@ namespace MediHub.Touchee.Tasks
                 _productRepository.Insert(product);
                 //throw new Exception("loi"); Test Transaction
                 _taskRepository.Insert(task);
-
+                Logger.Info("GHI LOG -> CreateTaskAndProduct: " + input.Name);
                 unitOfWork.Complete();
             }
         }
