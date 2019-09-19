@@ -1,4 +1,5 @@
-﻿using Abp.AutoMapper;
+﻿using System;
+using Abp.AutoMapper;
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using Abp.Runtime.Caching.Redis;
@@ -43,7 +44,18 @@ namespace MediHub.Touchee
                 options.DatabaseId = _appConfiguration.GetValue<int>("RedisCache:DatabaseId");
             });
 
-           
+            //Configuration for all caches
+            Configuration.Caching.ConfigureAll(cache =>
+            {
+                cache.DefaultSlidingExpireTime = TimeSpan.FromHours(2);
+            });
+
+            //Configuration for a specific cache
+            Configuration.Caching.Configure("MyCache", cache =>
+            {
+                cache.DefaultSlidingExpireTime = TimeSpan.FromHours(8);
+            });
+
             Configuration.Authorization.Providers.Add<ToucheeAuthorizationProvider>();
         }
 
