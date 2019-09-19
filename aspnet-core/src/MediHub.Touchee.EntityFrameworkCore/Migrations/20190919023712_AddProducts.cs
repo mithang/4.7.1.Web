@@ -24,6 +24,7 @@ namespace MediHub.Touchee.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+
             migrationBuilder.DropTable(
                 name: "Products");
         }
