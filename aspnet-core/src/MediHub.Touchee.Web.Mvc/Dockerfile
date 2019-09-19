@@ -1,0 +1,6 @@
+FROM microsoft/aspnetcore:2.0.1
+
+WORKDIR /app
+COPY . .
+
+ENTRYPOINT ["dotnet", "MediHub.Touchee.Web.Mvc.dll"]

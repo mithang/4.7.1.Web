@@ -1,0 +1,19 @@
+0. Chạy admin visual Studio:
+sudo /Applications/Visual\ Studio.app/Contents/MacOS/VisualStudio
+
+1. Tạo db cho bất kỳ hệ quản trị cơ sở nào:
+dotnet ef database update
+https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet
+
+2. Muốn kết nối đến driver nào thì dùng lib của thư viện đó:
+- Microsoft.EntityFrameworkCore.SqlServer
+- Npgsql.EntityFrameworkCore.PostgreSQL
+-> Sau đó vào file ToucheeDbContextConfigurer và appsettings.json để chỉnh sửa kết nối
+
+3. Cấu hình kết nối PostgreSQL
+https://aspnetboilerplate.com/Pages/Documents/EF-Core-PostgreSql-Integration
+
+4. Để tạo database cd vào MediHub.Touchee.EntityFrameworkCore và chạy lệnh dotnet ef database update
+
+5. Để thêm quyền vào file ToucheeAuthorizationProvider, PermissionNames. Mặc định khi chạy nó sẽ tự thêm vào AbpPermissions và chỉ định role cho admin
+Các role khác phải thêm bằng api hoặc cms
