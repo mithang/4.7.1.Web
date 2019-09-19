@@ -47,13 +47,13 @@ namespace MediHub.Touchee
             //Configuration for all caches
             Configuration.Caching.ConfigureAll(cache =>
             {
-                cache.DefaultSlidingExpireTime = TimeSpan.FromHours(2);
+                cache.DefaultSlidingExpireTime = TimeSpan.FromSeconds(2);
             });
 
             //Configuration for a specific cache
             Configuration.Caching.Configure("MyCache", cache =>
             {
-                cache.DefaultSlidingExpireTime = TimeSpan.FromHours(8);
+                cache.DefaultSlidingExpireTime = TimeSpan.FromSeconds(2);
             });
 
             Configuration.Authorization.Providers.Add<ToucheeAuthorizationProvider>();
