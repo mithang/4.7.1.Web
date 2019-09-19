@@ -10,7 +10,7 @@ namespace MediHub.Touchee
 {
     [DependsOn(
         typeof(ToucheeCoreModule),
-        //typeof(AbpRedisCacheModule),
+        typeof(AbpRedisCacheModule),
         typeof(AbpAutoMapperModule)
         )]
     public class ToucheeApplicationModule : AbpModule
@@ -31,11 +31,11 @@ namespace MediHub.Touchee
             //    options.DatabaseId = _appConfiguration.GetValue<int>("RedisCache:DatabaseId");
             //});
 
-            //Configuration.Caching.UseRedis(options =>
-            //{
-            //    options.ConnectionString = "localhost:6379";
-            //    options.DatabaseId =200;
-            //});
+            Configuration.Caching.UseRedis(options =>
+            {
+                options.ConnectionString = "localhost:6379";
+                options.DatabaseId = -1;
+            });
 
             Configuration.Authorization.Providers.Add<ToucheeAuthorizationProvider>();
         }
