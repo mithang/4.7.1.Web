@@ -15,5 +15,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Categories\" />
+    <Folder Include="Products\" />
   </ItemGroup>
 </Project>

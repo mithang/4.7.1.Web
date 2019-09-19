@@ -2137,3 +2137,432 @@ INFO  2019-09-18 23:23:45,449 [59   ] .Mvc.Infrastructure.ObjectResultExecutor -
 INFO  2019-09-18 23:23:45,455 [59   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MediHub.Touchee.MultiTenancy.TenantAppService.GetAll (MediHub.Touchee.Application) in 269.1223ms
 INFO  2019-09-18 23:23:45,459 [59   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'MediHub.Touchee.MultiTenancy.TenantAppService.GetAll (MediHub.Touchee.Application)'
 INFO  2019-09-18 23:23:45,466 [59   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 320.6609ms 200 application/json; charset=utf-8
+DEBUG 2019-09-19 10:14:59,845 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-09-19 10:15:00,010 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2019-09-19 10:15:00,042 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.Web.Host.Startup.ToucheeWebHostModule, MediHub.Touchee.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-19 10:15:00,046 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.ToucheeWebCoreModule, MediHub.Touchee.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-19 10:15:00,046 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.ToucheeApplicationModule, MediHub.Touchee.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-19 10:15:00,047 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.ToucheeCoreModule, MediHub.Touchee.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-19 10:15:00,047 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-19 10:15:00,047 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-19 10:15:00,048 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-19 10:15:00,049 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-19 10:15:00,051 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.EntityFrameworkCore.ToucheeEntityFrameworkModule, MediHub.Touchee.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-19 10:15:00,052 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-19 10:15:00,052 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-19 10:15:00,052 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-19 10:15:00,052 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-19 10:15:00,053 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-19 10:15:00,053 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-19 10:15:00,059 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2019-09-19 10:15:00,191 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-19 10:15:00,191 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-19 10:15:00,191 [1    ] o.Configuration.LanguageManagementConfig - Converted Touchee (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-19 10:15:00,191 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-19 10:15:00,778 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MediHub.Touchee.EntityFrameworkCore.ToucheeDbContext, MediHub.Touchee.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-19 10:15:02,824 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-09-19 10:15:03,325 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-09-19 10:15:03,930 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-09-19 10:15:04,198 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Touchee
+DEBUG 2019-09-19 10:15:04,614 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-09-19 10:15:05,152 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2019-09-19 10:15:05,504 [1    ] rization.Users.UserTokenExpirationWorker - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker
+DEBUG 2019-09-19 10:15:05,588 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 9 classes define auto mapping attributes
+DEBUG 2019-09-19 10:15:05,588 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2019-09-19 10:15:05,601 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Users.Dto.CreateUserDto
+DEBUG 2019-09-19 10:15:05,602 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Users.Dto.UserDto
+DEBUG 2019-09-19 10:15:05,602 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2019-09-19 10:15:05,603 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Sessions.Dto.UserLoginInfoDto
+DEBUG 2019-09-19 10:15:05,603 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Roles.Dto.PermissionDto
+DEBUG 2019-09-19 10:15:05,603 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Products.ProductDto
+DEBUG 2019-09-19 10:15:05,603 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2019-09-19 10:15:05,604 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.MultiTenancy.Dto.TenantDto
+INFO  2019-09-19 10:15:14,949 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.swagger.js  
+INFO  2019-09-19 10:15:14,949 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2019-09-19 10:15:14,949 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.js  
+INFO  2019-09-19 10:15:15,034 [10   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger/ui/abp.swagger.js was not modified
+INFO  2019-09-19 10:15:15,038 [5    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger/ui/abp.js was not modified
+INFO  2019-09-19 10:15:15,237 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 318.9359ms 304 application/javascript
+INFO  2019-09-19 10:15:15,241 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 318.9398ms 304 application/javascript
+INFO  2019-09-19 10:15:15,493 [6    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host)'
+INFO  2019-09-19 10:15:23,238 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host)
+INFO  2019-09-19 10:15:25,160 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host) - Validation state: Valid
+INFO  2019-09-19 10:15:25,170 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 3.1782ms.
+INFO  2019-09-19 10:15:25,601 [9    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2019-09-19 10:15:25,624 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host) in 2375.8136ms
+INFO  2019-09-19 10:15:25,631 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host)'
+INFO  2019-09-19 10:15:25,663 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10769.3416ms 302 
+INFO  2019-09-19 10:15:25,668 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger  
+INFO  2019-09-19 10:15:25,727 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 58.1702ms 301 
+INFO  2019-09-19 10:15:25,731 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2019-09-19 10:15:26,154 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 423.2717ms 200 text/html
+INFO  2019-09-19 10:15:26,507 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2019-09-19 10:15:26,720 [9    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-09-19 10:15:27,284 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 774.0016ms 200 application/json;charset=utf-8
+INFO  2019-09-19 10:17:20,919 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/Products/Create application/json-patch+json 51
+INFO  2019-09-19 10:17:20,935 [16   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2019-09-19 10:17:20,940 [16   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2019-09-19 10:17:20,955 [16   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-09-19 10:17:20,973 [16   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'MediHub.Touchee.Products.ProductsAppService.Create (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:17:21,011 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "Create", controller = "Products"}. Executing action MediHub.Touchee.Products.ProductsAppService.Create (MediHub.Touchee.Application)
+INFO  2019-09-19 10:17:21,015 [16   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2019-09-19 10:17:21,019 [16   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2019-09-19 10:17:22,097 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MediHub.Touchee.Products.ProductsAppService.Create (MediHub.Touchee.Application) with arguments (MediHub.Touchee.Products.ProductDto) - Validation state: Valid
+ERROR 2019-09-19 10:17:22,739 [6    ] Mvc.ExceptionHandling.AbpExceptionFilter - Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ProductDto -> Product
+MediHub.Touchee.Products.ProductDto -> MediHub.Touchee.Products.Product
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ProductDto -> Product
+MediHub.Touchee.Products.ProductDto -> MediHub.Touchee.Products.Product
+   at lambda_method(Closure , ProductDto , Product , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TDestination](Object source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 212
+   at Castle.Proxies.Invocations.CrudAppServiceBase`6_MapToEntity.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 68
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.ProductsAppServiceProxy.MapToEntity(ProductDto createInput)
+   at Abp.Application.Services.CrudAppService`8.Create(TCreateInput input) in D:\Github\aspnetboilerplate\src\Abp\Application\Services\CrudAppService.cs:line 130
+   at Castle.Proxies.Invocations.CrudAppService`8_Create.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 68
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.ProductsAppServiceProxy.Create(ProductDto input)
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2019-09-19 10:17:23,386 [6    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-09-19 10:17:23,425 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MediHub.Touchee.Products.ProductsAppService.Create (MediHub.Touchee.Application) in 2409.2554ms
+INFO  2019-09-19 10:17:23,430 [6    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'MediHub.Touchee.Products.ProductsAppService.Create (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:17:23,439 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2519.4966ms 500 application/json; charset=utf-8
+INFO  2019-09-19 10:17:36,496 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/Products/Create application/json-patch+json 40
+INFO  2019-09-19 10:17:36,502 [18   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2019-09-19 10:17:36,509 [18   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2019-09-19 10:17:36,516 [18   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-09-19 10:17:36,529 [18   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'MediHub.Touchee.Products.ProductsAppService.Create (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:17:36,541 [18   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "Create", controller = "Products"}. Executing action MediHub.Touchee.Products.ProductsAppService.Create (MediHub.Touchee.Application)
+INFO  2019-09-19 10:17:36,546 [18   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2019-09-19 10:17:36,551 [18   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2019-09-19 10:17:36,558 [18   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MediHub.Touchee.Products.ProductsAppService.Create (MediHub.Touchee.Application) with arguments (MediHub.Touchee.Products.ProductDto) - Validation state: Valid
+ERROR 2019-09-19 10:17:36,652 [14   ] Mvc.ExceptionHandling.AbpExceptionFilter - Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ProductDto -> Product
+MediHub.Touchee.Products.ProductDto -> MediHub.Touchee.Products.Product
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ProductDto -> Product
+MediHub.Touchee.Products.ProductDto -> MediHub.Touchee.Products.Product
+   at lambda_method(Closure , ProductDto , Product , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TDestination](Object source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 212
+   at Castle.Proxies.Invocations.CrudAppServiceBase`6_MapToEntity.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 68
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.ProductsAppServiceProxy.MapToEntity(ProductDto createInput)
+   at Abp.Application.Services.CrudAppService`8.Create(TCreateInput input) in D:\Github\aspnetboilerplate\src\Abp\Application\Services\CrudAppService.cs:line 130
+   at Castle.Proxies.Invocations.CrudAppService`8_Create.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 68
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.ProductsAppServiceProxy.Create(ProductDto input)
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2019-09-19 10:17:36,658 [14   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-09-19 10:17:36,663 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MediHub.Touchee.Products.ProductsAppService.Create (MediHub.Touchee.Application) in 117.542ms
+INFO  2019-09-19 10:17:36,667 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'MediHub.Touchee.Products.ProductsAppService.Create (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:17:36,673 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 181.137ms 500 application/json; charset=utf-8
+INFO  2019-09-19 10:17:41,365 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/Products/Create application/json-patch+json 40
+INFO  2019-09-19 10:17:41,371 [18   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2019-09-19 10:17:41,379 [18   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2019-09-19 10:17:41,385 [18   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-09-19 10:17:41,391 [18   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'MediHub.Touchee.Products.ProductsAppService.Create (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:17:41,404 [18   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "Create", controller = "Products"}. Executing action MediHub.Touchee.Products.ProductsAppService.Create (MediHub.Touchee.Application)
+INFO  2019-09-19 10:17:41,410 [18   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2019-09-19 10:17:41,416 [18   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2019-09-19 10:17:41,434 [18   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MediHub.Touchee.Products.ProductsAppService.Create (MediHub.Touchee.Application) with arguments (MediHub.Touchee.Products.ProductDto) - Validation state: Valid
+ERROR 2019-09-19 10:17:41,478 [19   ] Mvc.ExceptionHandling.AbpExceptionFilter - Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ProductDto -> Product
+MediHub.Touchee.Products.ProductDto -> MediHub.Touchee.Products.Product
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ProductDto -> Product
+MediHub.Touchee.Products.ProductDto -> MediHub.Touchee.Products.Product
+   at lambda_method(Closure , ProductDto , Product , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TDestination](Object source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 212
+   at Castle.Proxies.Invocations.CrudAppServiceBase`6_MapToEntity.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 68
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.ProductsAppServiceProxy.MapToEntity(ProductDto createInput)
+   at Abp.Application.Services.CrudAppService`8.Create(TCreateInput input) in D:\Github\aspnetboilerplate\src\Abp\Application\Services\CrudAppService.cs:line 130
+   at Castle.Proxies.Invocations.CrudAppService`8_Create.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 68
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.ProductsAppServiceProxy.Create(ProductDto input)
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2019-09-19 10:17:41,484 [19   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-09-19 10:17:41,488 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MediHub.Touchee.Products.ProductsAppService.Create (MediHub.Touchee.Application) in 79.7799ms
+INFO  2019-09-19 10:17:41,493 [19   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'MediHub.Touchee.Products.ProductsAppService.Create (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:17:41,498 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 133.0643ms 500 application/json; charset=utf-8
+INFO  2019-09-19 10:18:05,524 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Products/GetAll  
+INFO  2019-09-19 10:18:05,530 [19   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-09-19 10:18:05,535 [19   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'MediHub.Touchee.Products.ProductsAppService.GetAll (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:18:05,572 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Products"}. Executing action MediHub.Touchee.Products.ProductsAppService.GetAll (MediHub.Touchee.Application)
+INFO  2019-09-19 10:18:05,633 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MediHub.Touchee.Products.ProductsAppService.GetAll (MediHub.Touchee.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto) - Validation state: Valid
+INFO  2019-09-19 10:18:05,743 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method MediHub.Touchee.Products.ProductsAppService.GetAll (MediHub.Touchee.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 104.3693ms.
+INFO  2019-09-19 10:18:05,841 [14   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-09-19 10:18:05,849 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MediHub.Touchee.Products.ProductsAppService.GetAll (MediHub.Touchee.Application) in 271.8917ms
+INFO  2019-09-19 10:18:05,853 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'MediHub.Touchee.Products.ProductsAppService.GetAll (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:18:05,860 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 334.2036ms 200 application/json; charset=utf-8
+INFO  2019-09-19 10:20:00,405 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2019-09-19 10:20:00,445 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 110.2915ms 200 text/html
+INFO  2019-09-19 10:20:00,803 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2019-09-19 10:20:00,816 [24   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-09-19 10:20:00,864 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 61.8022ms 200 application/json;charset=utf-8
+INFO  2019-09-19 10:20:10,840 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/Products/Create application/json-patch+json 50
+INFO  2019-09-19 10:20:10,845 [25   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2019-09-19 10:20:10,851 [25   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2019-09-19 10:20:10,857 [25   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-09-19 10:20:10,863 [25   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'MediHub.Touchee.Products.ProductsAppService.Create (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:20:10,883 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "Create", controller = "Products"}. Executing action MediHub.Touchee.Products.ProductsAppService.Create (MediHub.Touchee.Application)
+INFO  2019-09-19 10:20:10,887 [25   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2019-09-19 10:20:10,892 [25   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2019-09-19 10:20:10,901 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MediHub.Touchee.Products.ProductsAppService.Create (MediHub.Touchee.Application) with arguments (MediHub.Touchee.Products.ProductDto) - Validation state: Valid
+ERROR 2019-09-19 10:20:11,220 [28   ] Mvc.ExceptionHandling.AbpExceptionFilter - Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ProductDto -> Product
+MediHub.Touchee.Products.ProductDto -> MediHub.Touchee.Products.Product
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ProductDto -> Product
+MediHub.Touchee.Products.ProductDto -> MediHub.Touchee.Products.Product
+   at lambda_method(Closure , ProductDto , Product , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TDestination](Object source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 212
+   at Castle.Proxies.Invocations.CrudAppServiceBase`6_MapToEntity.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 68
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.ProductsAppServiceProxy.MapToEntity(ProductDto createInput)
+   at Abp.Application.Services.CrudAppService`8.Create(TCreateInput input) in D:\Github\aspnetboilerplate\src\Abp\Application\Services\CrudAppService.cs:line 130
+   at Castle.Proxies.Invocations.CrudAppService`8_Create.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 68
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.ProductsAppServiceProxy.Create(ProductDto input)
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2019-09-19 10:20:11,228 [28   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-09-19 10:20:11,234 [28   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MediHub.Touchee.Products.ProductsAppService.Create (MediHub.Touchee.Application) in 346.9051ms
+INFO  2019-09-19 10:20:11,239 [28   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'MediHub.Touchee.Products.ProductsAppService.Create (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:20:11,245 [28   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 406.6759ms 500 application/json; charset=utf-8
+INFO  2019-09-19 10:28:02,734 [38   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Products/GetAll  
+INFO  2019-09-19 10:28:02,752 [38   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-09-19 10:28:02,759 [38   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'MediHub.Touchee.Products.ProductsAppService.GetAll (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:28:02,782 [38   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Products"}. Executing action MediHub.Touchee.Products.ProductsAppService.GetAll (MediHub.Touchee.Application)
+INFO  2019-09-19 10:28:02,798 [38   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MediHub.Touchee.Products.ProductsAppService.GetAll (MediHub.Touchee.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto) - Validation state: Valid
+INFO  2019-09-19 10:28:02,856 [38   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method MediHub.Touchee.Products.ProductsAppService.GetAll (MediHub.Touchee.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 52.6711ms.
+INFO  2019-09-19 10:28:03,099 [37   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-09-19 10:28:03,134 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MediHub.Touchee.Products.ProductsAppService.GetAll (MediHub.Touchee.Application) in 321.285ms
+INFO  2019-09-19 10:28:03,138 [37   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'MediHub.Touchee.Products.ProductsAppService.GetAll (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:28:03,144 [37   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 454.5274ms 200 application/json; charset=utf-8
+INFO  2019-09-19 10:28:15,213 [37   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Products/Get?Id=1  
+INFO  2019-09-19 10:28:15,220 [37   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-09-19 10:28:15,236 [37   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'MediHub.Touchee.Products.ProductsAppService.Get (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:28:15,254 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "Get", controller = "Products"}. Executing action MediHub.Touchee.Products.ProductsAppService.Get (MediHub.Touchee.Application)
+INFO  2019-09-19 10:28:15,276 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MediHub.Touchee.Products.ProductsAppService.Get (MediHub.Touchee.Application) with arguments (Abp.Application.Services.Dto.EntityDto`1[System.Int32]) - Validation state: Valid
+INFO  2019-09-19 10:28:15,312 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method MediHub.Touchee.Products.ProductsAppService.Get (MediHub.Touchee.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 31.7171ms.
+INFO  2019-09-19 10:28:15,407 [36   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-09-19 10:28:15,413 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MediHub.Touchee.Products.ProductsAppService.Get (MediHub.Touchee.Application) in 154.1618ms
+INFO  2019-09-19 10:28:15,419 [36   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'MediHub.Touchee.Products.ProductsAppService.Get (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:28:15,428 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 213.2326ms 200 application/json; charset=utf-8
+INFO  2019-09-19 10:28:34,346 [37   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:21021/api/services/app/Products/Update application/json-patch+json 50
+INFO  2019-09-19 10:28:34,352 [37   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2019-09-19 10:28:34,359 [37   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2019-09-19 10:28:34,365 [37   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-09-19 10:28:34,370 [37   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'MediHub.Touchee.Products.ProductsAppService.Update (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:28:34,386 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "Update", controller = "Products"}. Executing action MediHub.Touchee.Products.ProductsAppService.Update (MediHub.Touchee.Application)
+INFO  2019-09-19 10:28:34,390 [37   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2019-09-19 10:28:34,396 [37   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2019-09-19 10:28:34,402 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MediHub.Touchee.Products.ProductsAppService.Update (MediHub.Touchee.Application) with arguments (MediHub.Touchee.Products.ProductDto) - Validation state: Valid
+ERROR 2019-09-19 10:28:34,634 [38   ] Mvc.ExceptionHandling.AbpExceptionFilter - Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ProductDto -> Product
+MediHub.Touchee.Products.ProductDto -> MediHub.Touchee.Products.Product
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ProductDto -> Product
+MediHub.Touchee.Products.ProductDto -> MediHub.Touchee.Products.Product
+   at lambda_method(Closure , ProductDto , Product , ResolutionContext )
+   at Abp.Application.Services.CrudAppServiceBase`6.MapToEntity(TUpdateInput updateInput, TEntity entity) in D:\Github\aspnetboilerplate\src\Abp\Application\Services\CrudAppServiceBase.cs:line 131
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 68
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Application.Services.CrudAppService`8.Update(TUpdateInput input) in D:\Github\aspnetboilerplate\src\Abp\Application\Services\CrudAppService.cs:line 144
+   at Castle.Proxies.Invocations.CrudAppService`8_Update.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 68
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.ProductsAppServiceProxy.Update(ProductDto input)
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2019-09-19 10:28:34,641 [38   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-09-19 10:28:34,646 [38   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MediHub.Touchee.Products.ProductsAppService.Update (MediHub.Touchee.Application) in 255.6775ms
+INFO  2019-09-19 10:28:34,651 [38   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'MediHub.Touchee.Products.ProductsAppService.Update (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:28:34,656 [38   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 312.6763ms 500 application/json; charset=utf-8
+INFO  2019-09-19 10:28:51,153 [38   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DELETE http://localhost:21021/api/services/app/Products/Delete?Id=1  0
+INFO  2019-09-19 10:28:51,158 [38   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2019-09-19 10:28:51,163 [38   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2019-09-19 10:28:51,169 [38   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-09-19 10:28:51,174 [38   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'MediHub.Touchee.Products.ProductsAppService.Delete (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:28:51,193 [38   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "Delete", controller = "Products"}. Executing action MediHub.Touchee.Products.ProductsAppService.Delete (MediHub.Touchee.Application)
+INFO  2019-09-19 10:28:51,198 [38   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2019-09-19 10:28:51,203 [38   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2019-09-19 10:28:51,211 [38   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MediHub.Touchee.Products.ProductsAppService.Delete (MediHub.Touchee.Application) with arguments (Abp.Application.Services.Dto.EntityDto`1[System.Int32]) - Validation state: Valid
+INFO  2019-09-19 10:28:51,235 [38   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method MediHub.Touchee.Products.ProductsAppService.Delete (MediHub.Touchee.Application), returned result Microsoft.AspNetCore.Mvc.EmptyResult in 20.0929ms.
+INFO  2019-09-19 10:28:51,349 [38   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-09-19 10:28:51,353 [38   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MediHub.Touchee.Products.ProductsAppService.Delete (MediHub.Touchee.Application) in 156.1519ms
+INFO  2019-09-19 10:28:51,364 [38   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'MediHub.Touchee.Products.ProductsAppService.Delete (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:28:51,370 [38   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 215.9292ms 200 application/json; charset=utf-8
+INFO  2019-09-19 10:29:00,727 [38   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Products/GetAll  
+INFO  2019-09-19 10:29:00,734 [38   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-09-19 10:29:00,740 [38   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'MediHub.Touchee.Products.ProductsAppService.GetAll (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:29:00,758 [38   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Products"}. Executing action MediHub.Touchee.Products.ProductsAppService.GetAll (MediHub.Touchee.Application)
+INFO  2019-09-19 10:29:00,765 [38   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MediHub.Touchee.Products.ProductsAppService.GetAll (MediHub.Touchee.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto) - Validation state: Valid
+INFO  2019-09-19 10:29:00,776 [38   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method MediHub.Touchee.Products.ProductsAppService.GetAll (MediHub.Touchee.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 6.0163ms.
+INFO  2019-09-19 10:29:00,870 [36   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-09-19 10:29:00,875 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MediHub.Touchee.Products.ProductsAppService.GetAll (MediHub.Touchee.Application) in 112.4746ms
+INFO  2019-09-19 10:29:00,880 [36   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'MediHub.Touchee.Products.ProductsAppService.GetAll (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:29:00,885 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 157.7505ms 200 application/json; charset=utf-8
+INFO  2019-09-19 10:30:15,602 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Products/GetAll  
+INFO  2019-09-19 10:30:15,609 [43   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-09-19 10:30:15,613 [43   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'MediHub.Touchee.Products.ProductsAppService.GetAll (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:30:15,624 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Products"}. Executing action MediHub.Touchee.Products.ProductsAppService.GetAll (MediHub.Touchee.Application)
+INFO  2019-09-19 10:30:15,630 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MediHub.Touchee.Products.ProductsAppService.GetAll (MediHub.Touchee.Application) with arguments (Abp.Application.Services.Dto.PagedAndSortedResultRequestDto) - Validation state: Valid
+INFO  2019-09-19 10:30:15,641 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method MediHub.Touchee.Products.ProductsAppService.GetAll (MediHub.Touchee.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 5.5968ms.
+INFO  2019-09-19 10:30:15,732 [42   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-09-19 10:30:15,737 [42   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MediHub.Touchee.Products.ProductsAppService.GetAll (MediHub.Touchee.Application) in 108.6491ms
+INFO  2019-09-19 10:30:15,741 [42   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'MediHub.Touchee.Products.ProductsAppService.GetAll (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:30:15,747 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 191.0911ms 200 application/json; charset=utf-8
+INFO  2019-09-19 10:30:26,380 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Products/Get?Id=3  
+INFO  2019-09-19 10:30:26,388 [44   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-09-19 10:30:26,394 [44   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'MediHub.Touchee.Products.ProductsAppService.Get (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:30:26,407 [44   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "Get", controller = "Products"}. Executing action MediHub.Touchee.Products.ProductsAppService.Get (MediHub.Touchee.Application)
+INFO  2019-09-19 10:30:26,416 [44   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MediHub.Touchee.Products.ProductsAppService.Get (MediHub.Touchee.Application) with arguments (Abp.Application.Services.Dto.EntityDto`1[System.Int32]) - Validation state: Valid
+INFO  2019-09-19 10:30:26,428 [44   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method MediHub.Touchee.Products.ProductsAppService.Get (MediHub.Touchee.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4.9207ms.
+INFO  2019-09-19 10:30:26,546 [42   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-09-19 10:30:26,575 [42   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MediHub.Touchee.Products.ProductsAppService.Get (MediHub.Touchee.Application) in 138.7402ms
+INFO  2019-09-19 10:30:26,580 [42   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'MediHub.Touchee.Products.ProductsAppService.Get (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:30:26,588 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 215.4588ms 200 application/json; charset=utf-8
+INFO  2019-09-19 10:30:38,880 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:21021/api/services/app/Products/Update application/json-patch+json 50
+INFO  2019-09-19 10:30:38,888 [42   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2019-09-19 10:30:38,895 [42   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2019-09-19 10:30:38,901 [42   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-09-19 10:30:38,907 [42   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'MediHub.Touchee.Products.ProductsAppService.Update (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:30:38,921 [42   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "Update", controller = "Products"}. Executing action MediHub.Touchee.Products.ProductsAppService.Update (MediHub.Touchee.Application)
+INFO  2019-09-19 10:30:38,926 [42   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2019-09-19 10:30:38,931 [42   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2019-09-19 10:30:38,938 [42   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MediHub.Touchee.Products.ProductsAppService.Update (MediHub.Touchee.Application) with arguments (MediHub.Touchee.Products.ProductDto) - Validation state: Valid
+ERROR 2019-09-19 10:30:39,055 [45   ] Mvc.ExceptionHandling.AbpExceptionFilter - Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ProductDto -> Product
+MediHub.Touchee.Products.ProductDto -> MediHub.Touchee.Products.Product
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ProductDto -> Product
+MediHub.Touchee.Products.ProductDto -> MediHub.Touchee.Products.Product
+   at lambda_method(Closure , ProductDto , Product , ResolutionContext )
+   at Abp.Application.Services.CrudAppServiceBase`6.MapToEntity(TUpdateInput updateInput, TEntity entity) in D:\Github\aspnetboilerplate\src\Abp\Application\Services\CrudAppServiceBase.cs:line 131
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 68
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Application.Services.CrudAppService`8.Update(TUpdateInput input) in D:\Github\aspnetboilerplate\src\Abp\Application\Services\CrudAppService.cs:line 144
+   at Castle.Proxies.Invocations.CrudAppService`8_Update.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 68
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.ProductsAppServiceProxy.Update(ProductDto input)
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2019-09-19 10:30:39,062 [45   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-09-19 10:30:39,067 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MediHub.Touchee.Products.ProductsAppService.Update (MediHub.Touchee.Application) in 140.8045ms
+INFO  2019-09-19 10:30:39,072 [45   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'MediHub.Touchee.Products.ProductsAppService.Update (MediHub.Touchee.Application)'
+INFO  2019-09-19 10:30:39,078 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 203.4128ms 500 application/json; charset=utf-8
