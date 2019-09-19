@@ -1,6 +1,7 @@
 ﻿using Abp.AutoMapper;
 using Abp.Modules;
 using Abp.Reflection.Extensions;
+using Abp.Runtime.Caching.Redis;
 using MediHub.Touchee.Authorization;
 using MediHub.Touchee.Products;
 using MediHub.Touchee.Products.Dto;
@@ -8,8 +9,10 @@ using MediHub.Touchee.Products.Dto;
 namespace MediHub.Touchee
 {
     [DependsOn(
-        typeof(ToucheeCoreModule), 
-        typeof(AbpAutoMapperModule))]
+        typeof(ToucheeCoreModule),
+        //typeof(AbpRedisCacheModule),
+        typeof(AbpAutoMapperModule)
+        )]
     public class ToucheeApplicationModule : AbpModule
     {
         public override void PreInitialize()
@@ -20,6 +23,20 @@ namespace MediHub.Touchee
                         .ForMember(u => u.Name, options => options.MapFrom(input => input.Name))
                       .ForMember(u => u.Quantity, options => options.MapFrom(input => input.Quantity));
             });
+
+            //Configuration.Caching.UseRedis();
+            //Configuration.Caching.UseRedis(options =>
+            //{
+            //    options.ConnectionString = _appConfiguration["RedisCache:ConnectionString"];
+            //    options.DatabaseId = _appConfiguration.GetValue<int>("RedisCache:DatabaseId");
+            //});
+
+            //Configuration.Caching.UseRedis(options =>
+            //{
+            //    options.ConnectionString = "localhost:6379";
+            //    options.DatabaseId =200;
+            //});
+
             Configuration.Authorization.Providers.Add<ToucheeAuthorizationProvider>();
         }
 

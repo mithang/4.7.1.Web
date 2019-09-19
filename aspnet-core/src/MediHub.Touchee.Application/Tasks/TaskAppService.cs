@@ -6,6 +6,7 @@ using Abp.Application.Services.Dto;
 using Abp.Collections.Extensions;
 using Abp.Domain.Repositories;
 using Abp.Domain.Uow;
+using Abp.Runtime.Caching;
 using Castle.Core.Logging;
 using MediHub.Touchee.Products;
 using MediHub.Touchee.Products.Dto;
@@ -20,7 +21,9 @@ namespace MediHub.Touchee.Tasks
 
         public ILogger Logger { get; set; }
 
-        public TaskAppService(IRepository<Task> repository, IUnitOfWorkManager unitOfWorkManager, IRepository<Product> productRepository)
+        private readonly ICacheManager _cacheManager;
+
+        public TaskAppService(ICacheManager cacheManager,IRepository<Task> repository, IUnitOfWorkManager unitOfWorkManager, IRepository<Product> productRepository)
             : base(repository)
         {
             //CreatePermissionName = "MyTaskCreationPermission";
@@ -29,6 +32,9 @@ namespace MediHub.Touchee.Tasks
             _taskRepository = repository;
 
             Logger = NullLogger.Instance;
+
+            _cacheManager = cacheManager;
+
         }
 
         protected override IQueryable<Task> CreateFilteredQuery(GetAllTasksInput input)
@@ -101,5 +107,24 @@ namespace MediHub.Touchee.Tasks
 
         //    //...other module methods
         //}
+
+        public string GetItem(string key)
+        {
+            //Try to get from cache
+            return _cacheManager
+                    .GetCache("MyCache")
+                    .Get(key,()=>key);
+        }
+
+        public string SetItem(string key)
+        {
+            var value = key + new Random().Next(20);
+            //Try to get from cache
+            _cacheManager
+                    .GetCache("MyCache").Set(key, value);
+            return value;
+        }
+
+      
     }
 }

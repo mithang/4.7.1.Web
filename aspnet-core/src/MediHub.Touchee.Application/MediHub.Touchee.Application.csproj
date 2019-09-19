@@ -19,4 +19,7 @@
     <Folder Include="Products\Dto\" />
     <Folder Include="Tasks\" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Abp.RedisCache" Version="4.9.0" />
+  </ItemGroup>
 </Project>
