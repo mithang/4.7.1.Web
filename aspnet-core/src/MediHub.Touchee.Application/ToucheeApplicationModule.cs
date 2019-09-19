@@ -3,8 +3,11 @@ using Abp.Modules;
 using Abp.Reflection.Extensions;
 using Abp.Runtime.Caching.Redis;
 using MediHub.Touchee.Authorization;
+using MediHub.Touchee.Configuration;
 using MediHub.Touchee.Products;
 using MediHub.Touchee.Products.Dto;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 
 namespace MediHub.Touchee
 {
@@ -15,6 +18,15 @@ namespace MediHub.Touchee
         )]
     public class ToucheeApplicationModule : AbpModule
     {
+        private readonly IHostingEnvironment _env;
+        private readonly IConfigurationRoot _appConfiguration;
+
+        public ToucheeApplicationModule(IHostingEnvironment env)
+        {
+            _env = env;
+            _appConfiguration = AppConfigurations.Get(env.ContentRootPath, env.EnvironmentName, env.IsDevelopment());
+        }
+
         public override void PreInitialize()
         {
             Configuration.Modules.AbpAutoMapper().Configurators.Add(config =>
@@ -24,19 +36,14 @@ namespace MediHub.Touchee
                       .ForMember(u => u.Quantity, options => options.MapFrom(input => input.Quantity));
             });
 
-            //Configuration.Caching.UseRedis();
-            //Configuration.Caching.UseRedis(options =>
-            //{
-            //    options.ConnectionString = _appConfiguration["RedisCache:ConnectionString"];
-            //    options.DatabaseId = _appConfiguration.GetValue<int>("RedisCache:DatabaseId");
-            //});
-
+            
             Configuration.Caching.UseRedis(options =>
             {
-                options.ConnectionString = "localhost:6379";
-                options.DatabaseId = -1;
+                options.ConnectionString = _appConfiguration["RedisCache:ConnectionString"];
+                options.DatabaseId = _appConfiguration.GetValue<int>("RedisCache:DatabaseId");
             });
 
+           
             Configuration.Authorization.Providers.Add<ToucheeAuthorizationProvider>();
         }
 
