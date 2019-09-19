@@ -17,6 +17,10 @@ namespace MediHub.Touchee.Authorization
             context.CreatePermission(PermissionNames.Pages_Categories_Add, L("Add Category"));
             context.CreatePermission(PermissionNames.Pages_Categories_Delete, L("Delete Category"));
             context.CreatePermission(PermissionNames.Pages_Categories_Edit, L("Edit Category"));
+
+            //minhtv: 19-09-2019
+            context.CreatePermission(PermissionNames.Pages_Products, L("Products"));
+
         }
 
         private static ILocalizableString L(string name)

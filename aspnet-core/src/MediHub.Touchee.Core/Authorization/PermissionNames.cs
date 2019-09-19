@@ -14,6 +14,9 @@
         public const string Pages_Categories_Edit = "Pages.Categories.Edit";
         public const string Pages_Categories_Delete = "Pages.Categories.Delete";
 
+        //minhtv: 19-09-2019
+        public const string Pages_Products = "Pages.Products";
+
 
     }
 }
