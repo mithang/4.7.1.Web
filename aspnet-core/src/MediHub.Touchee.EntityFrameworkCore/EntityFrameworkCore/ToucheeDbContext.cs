@@ -3,12 +3,14 @@ using Abp.Zero.EntityFrameworkCore;
 using MediHub.Touchee.Authorization.Roles;
 using MediHub.Touchee.Authorization.Users;
 using MediHub.Touchee.MultiTenancy;
+using MediHub.Touchee.Products;
 
 namespace MediHub.Touchee.EntityFrameworkCore
 {
     public class ToucheeDbContext : AbpZeroDbContext<Tenant, Role, User, ToucheeDbContext>
     {
         /* Define a DbSet for each entity of the application */
+        public DbSet<Product> Products { get; set; }
         
         public ToucheeDbContext(DbContextOptions<ToucheeDbContext> options)
             : base(options)
