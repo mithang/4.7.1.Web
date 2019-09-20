@@ -27,5 +27,10 @@
     <Folder Include="Products\" />
     <Folder Include="Tasks\" />
     <Folder Include="Emails\" />
+    <Folder Include="Commons\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Commons\SameAuthorRequirement.cs" />
+    <Compile Remove="Commons\StaticHelper.cs" />
   </ItemGroup>
 </Project>

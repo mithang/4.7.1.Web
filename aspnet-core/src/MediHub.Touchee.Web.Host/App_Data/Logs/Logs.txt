@@ -6850,3 +6850,394 @@ INFO  2019-09-20 00:07:43,358 [35   ] .Mvc.Infrastructure.ObjectResultExecutor -
 INFO  2019-09-20 00:07:43,363 [35   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MediHub.Touchee.Tasks.TaskAppService.GetItem (MediHub.Touchee.Application) in 96.8358ms
 INFO  2019-09-20 00:07:43,368 [35   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'MediHub.Touchee.Tasks.TaskAppService.GetItem (MediHub.Touchee.Application)'
 INFO  2019-09-20 00:07:43,373 [35   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 143.3924ms 200 application/json; charset=utf-8
+DEBUG 2019-09-20 00:27:33,570 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-09-20 00:27:33,944 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2019-09-20 00:27:33,980 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.Web.Host.Startup.ToucheeWebHostModule, MediHub.Touchee.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 00:27:33,984 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.ToucheeWebCoreModule, MediHub.Touchee.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 00:27:33,985 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.ToucheeApplicationModule, MediHub.Touchee.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 00:27:33,986 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.ToucheeCoreModule, MediHub.Touchee.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 00:27:33,987 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 00:27:33,987 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 00:27:33,987 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=4.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 00:27:33,988 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=4.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 00:27:33,989 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 00:27:33,990 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.EntityFrameworkCore.ToucheeEntityFrameworkModule, MediHub.Touchee.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 00:27:33,991 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 00:27:33,991 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 00:27:33,992 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 00:27:33,992 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 00:27:33,992 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 00:27:33,993 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 00:27:34,000 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2019-09-20 00:27:34,604 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-20 00:27:34,604 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-20 00:27:34,605 [1    ] o.Configuration.LanguageManagementConfig - Converted Touchee (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-20 00:27:34,605 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-20 00:27:35,653 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MediHub.Touchee.EntityFrameworkCore.ToucheeDbContext, MediHub.Touchee.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 00:27:39,968 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-09-20 00:27:40,635 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-09-20 00:27:41,753 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-09-20 00:27:42,272 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Touchee
+DEBUG 2019-09-20 00:27:42,914 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-09-20 00:27:43,590 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2019-09-20 00:27:44,174 [1    ] rization.Users.UserTokenExpirationWorker - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker
+DEBUG 2019-09-20 00:27:44,326 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2019-09-20 00:27:44,326 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2019-09-20 00:27:44,347 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Users.Dto.CreateUserDto
+DEBUG 2019-09-20 00:27:44,349 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Users.Dto.UserDto
+DEBUG 2019-09-20 00:27:44,355 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Tasks.CreateTaskInput
+DEBUG 2019-09-20 00:27:44,355 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Tasks.TaskDto
+DEBUG 2019-09-20 00:27:44,357 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Tasks.UpdateTaskInput
+DEBUG 2019-09-20 00:27:44,358 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2019-09-20 00:27:44,358 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Sessions.Dto.UserLoginInfoDto
+DEBUG 2019-09-20 00:27:44,360 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Roles.Dto.PermissionDto
+DEBUG 2019-09-20 00:27:44,360 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Products.Dto.CreateProductDto
+DEBUG 2019-09-20 00:27:44,360 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Products.Dto.ProductDto
+DEBUG 2019-09-20 00:27:44,360 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2019-09-20 00:27:44,360 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.MultiTenancy.Dto.TenantDto
+INFO  2019-09-20 00:27:58,086 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2019-09-20 00:27:58,088 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2019-09-20 00:27:59,259 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host)'
+INFO  2019-09-20 00:28:05,425 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7342.4321ms 200 application/json;charset=utf-8
+INFO  2019-09-20 00:28:11,396 [22   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host)
+INFO  2019-09-20 00:28:14,202 [22   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host) - Validation state: Valid
+INFO  2019-09-20 00:28:14,230 [22   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 12.3671ms.
+INFO  2019-09-20 00:28:15,166 [21   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2019-09-20 00:28:15,192 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host) in 3783.541ms
+INFO  2019-09-20 00:28:15,201 [21   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host)'
+INFO  2019-09-20 00:28:15,223 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 17182.6034ms 302 
+INFO  2019-09-20 00:28:15,229 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger  
+INFO  2019-09-20 00:28:15,319 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 69.65ms 301 
+INFO  2019-09-20 00:28:15,324 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2019-09-20 00:28:15,487 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 157.7471ms 200 text/html
+INFO  2019-09-20 00:28:15,879 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2019-09-20 00:28:16,020 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 137.4436ms 200 application/json;charset=utf-8
+INFO  2019-09-20 00:28:36,561 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/Task/SendEmail  0
+INFO  2019-09-20 00:28:36,582 [19   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2019-09-20 00:28:36,587 [19   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2019-09-20 00:28:36,712 [21   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'MediHub.Touchee.Tasks.TaskAppService.SendEmail (MediHub.Touchee.Application)'
+INFO  2019-09-20 00:28:36,725 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "SendEmail", controller = "Task"}. Executing action MediHub.Touchee.Tasks.TaskAppService.SendEmail (MediHub.Touchee.Application)
+INFO  2019-09-20 00:28:36,729 [21   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2019-09-20 00:28:36,733 [21   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2019-09-20 00:28:38,024 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MediHub.Touchee.Tasks.TaskAppService.SendEmail (MediHub.Touchee.Application) - Validation state: Valid
+INFO  2019-09-20 00:28:39,364 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method MediHub.Touchee.Tasks.TaskAppService.SendEmail (MediHub.Touchee.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1336.352ms.
+INFO  2019-09-20 00:28:39,689 [25   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-09-20 00:28:39,725 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MediHub.Touchee.Tasks.TaskAppService.SendEmail (MediHub.Touchee.Application) in 2994.4839ms
+INFO  2019-09-20 00:28:39,729 [25   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'MediHub.Touchee.Tasks.TaskAppService.SendEmail (MediHub.Touchee.Application)'
+INFO  2019-09-20 00:28:39,737 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3175.9649ms 200 application/json; charset=utf-8
+DEBUG 2019-09-20 09:24:45,909 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-09-20 09:24:46,196 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2019-09-20 09:24:46,224 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.Web.Host.Startup.ToucheeWebHostModule, MediHub.Touchee.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:24:46,229 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.ToucheeWebCoreModule, MediHub.Touchee.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:24:46,229 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.ToucheeApplicationModule, MediHub.Touchee.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:24:46,229 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.ToucheeCoreModule, MediHub.Touchee.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:24:46,230 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:24:46,230 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:24:46,230 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=4.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:24:46,230 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=4.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:24:46,231 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:24:46,232 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.EntityFrameworkCore.ToucheeEntityFrameworkModule, MediHub.Touchee.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:24:46,233 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:24:46,233 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:24:46,233 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:24:46,234 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:24:46,234 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:24:46,234 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:24:46,239 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2019-09-20 09:24:46,681 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-20 09:24:46,682 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-20 09:24:46,682 [1    ] o.Configuration.LanguageManagementConfig - Converted Touchee (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-20 09:24:46,682 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-20 09:24:47,294 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MediHub.Touchee.EntityFrameworkCore.ToucheeDbContext, MediHub.Touchee.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:24:49,928 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-09-20 09:24:50,305 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-09-20 09:24:50,855 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-09-20 09:24:51,098 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Touchee
+DEBUG 2019-09-20 09:24:51,468 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-09-20 09:24:51,937 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2019-09-20 09:24:52,266 [1    ] rization.Users.UserTokenExpirationWorker - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker
+DEBUG 2019-09-20 09:24:52,344 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2019-09-20 09:24:52,345 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2019-09-20 09:24:52,357 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Users.Dto.CreateUserDto
+DEBUG 2019-09-20 09:24:52,358 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Users.Dto.UserDto
+DEBUG 2019-09-20 09:24:52,358 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Tasks.CreateTaskInput
+DEBUG 2019-09-20 09:24:52,358 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Tasks.TaskDto
+DEBUG 2019-09-20 09:24:52,359 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Tasks.UpdateTaskInput
+DEBUG 2019-09-20 09:24:52,360 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2019-09-20 09:24:52,360 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Sessions.Dto.UserLoginInfoDto
+DEBUG 2019-09-20 09:24:52,360 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Roles.Dto.PermissionDto
+DEBUG 2019-09-20 09:24:52,360 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Products.Dto.CreateProductDto
+DEBUG 2019-09-20 09:24:52,361 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Products.Dto.ProductDto
+DEBUG 2019-09-20 09:24:52,361 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2019-09-20 09:24:52,361 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.MultiTenancy.Dto.TenantDto
+INFO  2019-09-20 09:25:02,030 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.swagger.js  
+INFO  2019-09-20 09:25:02,030 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2019-09-20 09:25:02,030 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.js  
+INFO  2019-09-20 09:25:02,030 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2019-09-20 09:25:02,119 [8    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger/ui/abp.swagger.js was not modified
+INFO  2019-09-20 09:25:02,119 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger/ui/abp.js was not modified
+INFO  2019-09-20 09:25:02,265 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 293.1035ms 304 application/javascript
+INFO  2019-09-20 09:25:02,269 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 292.9106ms 304 application/javascript
+INFO  2019-09-20 09:25:02,696 [8    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host)'
+INFO  2019-09-20 09:25:06,112 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4145.4058ms 200 application/json;charset=utf-8
+INFO  2019-09-20 09:25:10,450 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host)
+INFO  2019-09-20 09:25:12,299 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host) - Validation state: Valid
+INFO  2019-09-20 09:25:12,308 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 2.947ms.
+INFO  2019-09-20 09:25:12,713 [9    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2019-09-20 09:25:12,731 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host) in 2271.7354ms
+INFO  2019-09-20 09:25:12,738 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host)'
+INFO  2019-09-20 09:25:12,754 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10786.7019ms 302 
+INFO  2019-09-20 09:25:12,758 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger  
+INFO  2019-09-20 09:25:12,787 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 27.3299ms 301 
+INFO  2019-09-20 09:25:12,794 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2019-09-20 09:25:12,881 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 84.6369ms 200 text/html
+INFO  2019-09-20 09:31:32,274 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/TokenAuth/Authenticate application/json 50
+INFO  2019-09-20 09:31:32,292 [32   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2019-09-20 09:31:32,296 [32   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2019-09-20 09:31:32,453 [31   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'MediHub.Touchee.Controllers.TokenAuthController.Authenticate (MediHub.Touchee.Web.Core)'
+INFO  2019-09-20 09:31:32,504 [31   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing action MediHub.Touchee.Controllers.TokenAuthController.Authenticate (MediHub.Touchee.Web.Core)
+INFO  2019-09-20 09:31:32,508 [31   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2019-09-20 09:31:32,512 [31   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2019-09-20 09:31:33,932 [31   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MediHub.Touchee.Controllers.TokenAuthController.Authenticate (MediHub.Touchee.Web.Core) with arguments (MediHub.Touchee.Models.TokenAuth.AuthenticateModel) - Validation state: Valid
+INFO  2019-09-20 09:31:35,274 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method MediHub.Touchee.Controllers.TokenAuthController.Authenticate (MediHub.Touchee.Web.Core), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1337.9132ms.
+INFO  2019-09-20 09:31:35,320 [36   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-09-20 09:31:35,356 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MediHub.Touchee.Controllers.TokenAuthController.Authenticate (MediHub.Touchee.Web.Core) in 2848.3352ms
+INFO  2019-09-20 09:31:35,360 [36   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'MediHub.Touchee.Controllers.TokenAuthController.Authenticate (MediHub.Touchee.Web.Core)'
+INFO  2019-09-20 09:31:35,367 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3093.0812ms 200 application/json; charset=utf-8
+DEBUG 2019-09-20 09:56:34,059 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-09-20 09:56:34,220 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2019-09-20 09:56:34,245 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.Web.Host.Startup.ToucheeWebHostModule, MediHub.Touchee.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:56:34,249 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.ToucheeWebCoreModule, MediHub.Touchee.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:56:34,249 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.ToucheeApplicationModule, MediHub.Touchee.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:56:34,249 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.ToucheeCoreModule, MediHub.Touchee.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:56:34,250 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:56:34,250 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:56:34,250 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=4.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:56:34,251 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=4.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:56:34,251 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:56:34,254 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.EntityFrameworkCore.ToucheeEntityFrameworkModule, MediHub.Touchee.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:56:34,254 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:56:34,254 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:56:34,255 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:56:34,255 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:56:34,255 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:56:34,256 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:56:34,261 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2019-09-20 09:56:34,666 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-20 09:56:34,666 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-20 09:56:34,666 [1    ] o.Configuration.LanguageManagementConfig - Converted Touchee (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-20 09:56:34,666 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-20 09:56:35,276 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MediHub.Touchee.EntityFrameworkCore.ToucheeDbContext, MediHub.Touchee.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 09:56:37,984 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-09-20 09:56:38,371 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-09-20 09:56:38,948 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-09-20 09:56:39,207 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Touchee
+DEBUG 2019-09-20 09:56:39,588 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-09-20 09:56:40,206 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2019-09-20 09:56:40,580 [1    ] rization.Users.UserTokenExpirationWorker - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker
+DEBUG 2019-09-20 09:56:40,668 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2019-09-20 09:56:40,669 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2019-09-20 09:56:40,683 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Users.Dto.CreateUserDto
+DEBUG 2019-09-20 09:56:40,684 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Users.Dto.UserDto
+DEBUG 2019-09-20 09:56:40,684 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Tasks.CreateTaskInput
+DEBUG 2019-09-20 09:56:40,684 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Tasks.TaskDto
+DEBUG 2019-09-20 09:56:40,685 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Tasks.UpdateTaskInput
+DEBUG 2019-09-20 09:56:40,685 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2019-09-20 09:56:40,686 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Sessions.Dto.UserLoginInfoDto
+DEBUG 2019-09-20 09:56:40,686 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Roles.Dto.PermissionDto
+DEBUG 2019-09-20 09:56:40,686 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Products.Dto.CreateProductDto
+DEBUG 2019-09-20 09:56:40,686 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Products.Dto.ProductDto
+DEBUG 2019-09-20 09:56:40,686 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2019-09-20 09:56:40,687 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.MultiTenancy.Dto.TenantDto
+INFO  2019-09-20 09:56:52,930 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2019-09-20 09:56:52,931 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2019-09-20 09:56:53,629 [8    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host)'
+INFO  2019-09-20 09:56:57,897 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4997.8756ms 200 application/json;charset=utf-8
+INFO  2019-09-20 09:57:02,799 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host)
+INFO  2019-09-20 09:57:04,950 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host) - Validation state: Valid
+INFO  2019-09-20 09:57:04,963 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 4.3925ms.
+INFO  2019-09-20 09:57:05,645 [21   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2019-09-20 09:57:05,676 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host) in 2865.1386ms
+INFO  2019-09-20 09:57:05,686 [21   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host)'
+INFO  2019-09-20 09:57:05,715 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12841.3929ms 302 
+INFO  2019-09-20 09:57:05,720 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger  
+INFO  2019-09-20 09:57:05,875 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 154.0361ms 301 
+INFO  2019-09-20 09:57:05,880 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2019-09-20 09:57:05,983 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 98.7026ms 200 text/html
+INFO  2019-09-20 09:57:06,326 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2019-09-20 09:57:06,597 [5    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-09-20 09:57:06,909 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 579.3806ms 200 application/json;charset=utf-8
+INFO  2019-09-20 09:57:28,895 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/Task/SendEmail  0
+INFO  2019-09-20 09:57:28,912 [5    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2019-09-20 09:57:28,917 [5    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2019-09-20 09:57:28,932 [5    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-09-20 09:57:29,215 [24   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'MediHub.Touchee.Tasks.TaskAppService.SendEmail (MediHub.Touchee.Application)'
+INFO  2019-09-20 09:57:29,245 [24   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "SendEmail", controller = "Task"}. Executing action MediHub.Touchee.Tasks.TaskAppService.SendEmail (MediHub.Touchee.Application)
+INFO  2019-09-20 09:57:29,250 [24   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2019-09-20 09:57:29,254 [24   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2019-09-20 09:57:30,473 [24   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MediHub.Touchee.Tasks.TaskAppService.SendEmail (MediHub.Touchee.Application) - Validation state: Valid
+ERROR 2019-09-20 09:57:34,345 [21   ] Mvc.ExceptionHandling.AbpExceptionFilter - The method or operation is not implemented.
+System.NotImplementedException: The method or operation is not implemented.
+   at MediHub.Touchee.Tasks.Task.FromResult(String v) in /Users/apple/Desktop/4.7.1 web/aspnet-core/src/MediHub.Touchee.Core/Tasks/Task.cs:line 25
+   at MediHub.Touchee.Tasks.TaskAppService.SendEmail() in /Users/apple/Desktop/4.7.1 web/aspnet-core/src/MediHub.Touchee.Application/Tasks/TaskAppService.cs:line 141
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2019-09-20 09:57:34,983 [21   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-09-20 09:57:35,021 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MediHub.Touchee.Tasks.TaskAppService.SendEmail (MediHub.Touchee.Application) in 5771.3456ms
+INFO  2019-09-20 09:57:35,026 [21   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'MediHub.Touchee.Tasks.TaskAppService.SendEmail (MediHub.Touchee.Application)'
+INFO  2019-09-20 09:57:35,033 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6140.4468ms 500 application/json; charset=utf-8
+INFO  2019-09-20 09:59:40,546 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/Task/SendEmail  0
+INFO  2019-09-20 09:59:40,554 [21   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2019-09-20 09:59:40,558 [21   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2019-09-20 09:59:40,564 [21   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-09-20 09:59:40,876 [21   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'MediHub.Touchee.Tasks.TaskAppService.SendEmail (MediHub.Touchee.Application)'
+INFO  2019-09-20 09:59:40,891 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "SendEmail", controller = "Task"}. Executing action MediHub.Touchee.Tasks.TaskAppService.SendEmail (MediHub.Touchee.Application)
+INFO  2019-09-20 09:59:40,896 [21   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2019-09-20 09:59:40,900 [21   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2019-09-20 09:59:40,908 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MediHub.Touchee.Tasks.TaskAppService.SendEmail (MediHub.Touchee.Application) - Validation state: Valid
+DEBUG 2019-09-20 10:01:32,854 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-09-20 10:01:33,023 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2019-09-20 10:01:33,049 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.Web.Host.Startup.ToucheeWebHostModule, MediHub.Touchee.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:01:33,053 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.ToucheeWebCoreModule, MediHub.Touchee.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:01:33,053 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.ToucheeApplicationModule, MediHub.Touchee.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:01:33,054 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.ToucheeCoreModule, MediHub.Touchee.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:01:33,054 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:01:33,054 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:01:33,054 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=4.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:01:33,055 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=4.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:01:33,055 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:01:33,058 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.EntityFrameworkCore.ToucheeEntityFrameworkModule, MediHub.Touchee.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:01:33,058 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:01:33,059 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:01:33,059 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:01:33,059 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:01:33,060 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:01:33,060 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:01:33,064 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2019-09-20 10:01:33,469 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-20 10:01:33,469 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-20 10:01:33,470 [1    ] o.Configuration.LanguageManagementConfig - Converted Touchee (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-20 10:01:33,470 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-20 10:01:34,027 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MediHub.Touchee.EntityFrameworkCore.ToucheeDbContext, MediHub.Touchee.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:01:36,577 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-09-20 10:01:36,943 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-09-20 10:01:37,493 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-09-20 10:01:37,746 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Touchee
+DEBUG 2019-09-20 10:01:38,123 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-09-20 10:01:38,587 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2019-09-20 10:01:38,914 [1    ] rization.Users.UserTokenExpirationWorker - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker
+DEBUG 2019-09-20 10:01:38,991 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2019-09-20 10:01:38,991 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2019-09-20 10:01:39,002 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Users.Dto.CreateUserDto
+DEBUG 2019-09-20 10:01:39,003 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Users.Dto.UserDto
+DEBUG 2019-09-20 10:01:39,004 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Tasks.CreateTaskInput
+DEBUG 2019-09-20 10:01:39,004 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Tasks.TaskDto
+DEBUG 2019-09-20 10:01:39,005 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Tasks.UpdateTaskInput
+DEBUG 2019-09-20 10:01:39,005 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2019-09-20 10:01:39,005 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Sessions.Dto.UserLoginInfoDto
+DEBUG 2019-09-20 10:01:39,006 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Roles.Dto.PermissionDto
+DEBUG 2019-09-20 10:01:39,006 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Products.Dto.CreateProductDto
+DEBUG 2019-09-20 10:01:39,006 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Products.Dto.ProductDto
+DEBUG 2019-09-20 10:01:39,006 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2019-09-20 10:01:39,006 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.MultiTenancy.Dto.TenantDto
+INFO  2019-09-20 10:01:47,800 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2019-09-20 10:01:47,800 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2019-09-20 10:01:48,344 [8    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host)'
+INFO  2019-09-20 10:01:51,964 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4176.2285ms 200 application/json;charset=utf-8
+INFO  2019-09-20 10:01:56,234 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host)
+INFO  2019-09-20 10:01:58,119 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host) - Validation state: Valid
+INFO  2019-09-20 10:01:58,129 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 3.073ms.
+INFO  2019-09-20 10:01:58,536 [22   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2019-09-20 10:01:58,554 [22   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host) in 2310.6345ms
+INFO  2019-09-20 10:01:58,561 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host)'
+INFO  2019-09-20 10:01:58,580 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10838.3747ms 302 
+INFO  2019-09-20 10:01:58,584 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger  
+INFO  2019-09-20 10:01:58,635 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 50.4916ms 301 
+INFO  2019-09-20 10:01:58,644 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2019-09-20 10:01:58,727 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 80.2679ms 200 text/html
+INFO  2019-09-20 10:01:59,052 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2019-09-20 10:01:59,198 [22   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-09-20 10:01:59,302 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 248.772ms 200 application/json;charset=utf-8
+INFO  2019-09-20 10:04:11,410 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/Task/SendEmail  0
+INFO  2019-09-20 10:04:11,429 [27   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2019-09-20 10:04:11,434 [27   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2019-09-20 10:04:11,453 [27   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-09-20 10:04:11,592 [29   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'MediHub.Touchee.Tasks.TaskAppService.SendEmail (MediHub.Touchee.Application)'
+INFO  2019-09-20 10:04:11,621 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "SendEmail", controller = "Task"}. Executing action MediHub.Touchee.Tasks.TaskAppService.SendEmail (MediHub.Touchee.Application)
+INFO  2019-09-20 10:04:11,626 [29   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2019-09-20 10:04:11,631 [29   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2019-09-20 10:04:12,896 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MediHub.Touchee.Tasks.TaskAppService.SendEmail (MediHub.Touchee.Application) - Validation state: Valid
+INFO  2019-09-20 10:04:25,834 [31   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method MediHub.Touchee.Tasks.TaskAppService.SendEmail (MediHub.Touchee.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 12934.0976ms.
+INFO  2019-09-20 10:04:26,081 [26   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-09-20 10:04:26,121 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MediHub.Touchee.Tasks.TaskAppService.SendEmail (MediHub.Touchee.Application) in 14494.4559ms
+INFO  2019-09-20 10:04:26,126 [26   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'MediHub.Touchee.Tasks.TaskAppService.SendEmail (MediHub.Touchee.Application)'
+INFO  2019-09-20 10:04:26,136 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 14744.8098ms 200 application/json; charset=utf-8
+DEBUG 2019-09-20 10:14:22,239 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-09-20 10:14:22,453 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2019-09-20 10:14:22,477 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.Web.Host.Startup.ToucheeWebHostModule, MediHub.Touchee.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:14:22,481 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.ToucheeWebCoreModule, MediHub.Touchee.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:14:22,482 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.ToucheeApplicationModule, MediHub.Touchee.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:14:22,482 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.ToucheeCoreModule, MediHub.Touchee.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:14:22,483 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:14:22,483 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:14:22,484 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=4.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:14:22,484 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=4.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:14:22,485 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:14:22,486 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MediHub.Touchee.EntityFrameworkCore.ToucheeEntityFrameworkModule, MediHub.Touchee.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:14:22,486 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:14:22,487 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:14:22,487 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:14:22,487 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:14:22,487 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:14:22,488 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=4.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:14:22,492 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2019-09-20 10:14:22,920 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-20 10:14:22,920 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-20 10:14:22,920 [1    ] o.Configuration.LanguageManagementConfig - Converted Touchee (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-20 10:14:22,920 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-20 10:14:23,559 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MediHub.Touchee.EntityFrameworkCore.ToucheeDbContext, MediHub.Touchee.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-20 10:14:26,185 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-09-20 10:14:26,564 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-09-20 10:14:27,155 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-09-20 10:14:27,407 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Touchee
+DEBUG 2019-09-20 10:14:27,773 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-09-20 10:14:28,248 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2019-09-20 10:14:28,584 [1    ] rization.Users.UserTokenExpirationWorker - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker
+DEBUG 2019-09-20 10:14:28,658 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2019-09-20 10:14:28,658 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2019-09-20 10:14:28,670 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Users.Dto.CreateUserDto
+DEBUG 2019-09-20 10:14:28,671 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Users.Dto.UserDto
+DEBUG 2019-09-20 10:14:28,672 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Tasks.CreateTaskInput
+DEBUG 2019-09-20 10:14:28,672 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Tasks.TaskDto
+DEBUG 2019-09-20 10:14:28,672 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Tasks.UpdateTaskInput
+DEBUG 2019-09-20 10:14:28,673 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2019-09-20 10:14:28,673 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Sessions.Dto.UserLoginInfoDto
+DEBUG 2019-09-20 10:14:28,673 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Roles.Dto.PermissionDto
+DEBUG 2019-09-20 10:14:28,673 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Products.Dto.CreateProductDto
+DEBUG 2019-09-20 10:14:28,673 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.Products.Dto.ProductDto
+DEBUG 2019-09-20 10:14:28,673 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2019-09-20 10:14:28,674 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MediHub.Touchee.MultiTenancy.Dto.TenantDto
+INFO  2019-09-20 10:14:37,473 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2019-09-20 10:14:37,473 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2019-09-20 10:14:37,962 [6    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host)'
+INFO  2019-09-20 10:14:41,184 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3742.1806ms 200 application/json;charset=utf-8
+INFO  2019-09-20 10:14:45,552 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host)
+INFO  2019-09-20 10:14:47,420 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host) - Validation state: Valid
+INFO  2019-09-20 10:14:47,430 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 2.9533ms.
+INFO  2019-09-20 10:14:47,839 [19   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2019-09-20 10:14:47,857 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host) in 2295.1439ms
+INFO  2019-09-20 10:14:47,864 [19   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'MediHub.Touchee.Web.Host.Controllers.HomeController.Index (MediHub.Touchee.Web.Host)'
+INFO  2019-09-20 10:14:47,880 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10441.8216ms 302 
+INFO  2019-09-20 10:14:47,884 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger  
+INFO  2019-09-20 10:14:48,438 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 551.7629ms 301 
+INFO  2019-09-20 10:14:48,442 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2019-09-20 10:14:48,542 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 95.9655ms 200 text/html
+INFO  2019-09-20 10:14:48,882 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2019-09-20 10:14:49,050 [6    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-09-20 10:14:49,278 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 385.8557ms 200 application/json;charset=utf-8
