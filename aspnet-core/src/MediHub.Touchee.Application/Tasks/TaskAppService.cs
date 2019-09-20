@@ -6,8 +6,10 @@ using Abp.Application.Services.Dto;
 using Abp.Collections.Extensions;
 using Abp.Domain.Repositories;
 using Abp.Domain.Uow;
+using Abp.Net.Mail;
 using Abp.Runtime.Caching;
 using Castle.Core.Logging;
+using MediHub.Touchee.Core.Emails;
 using MediHub.Touchee.Products;
 using MediHub.Touchee.Products.Dto;
 
@@ -22,6 +24,7 @@ namespace MediHub.Touchee.Tasks
         public ILogger Logger { get; set; }
 
         private readonly ICacheManager _cacheManager;
+        
 
         public TaskAppService(ICacheManager cacheManager,IRepository<Task> repository, IUnitOfWorkManager unitOfWorkManager, IRepository<Product> productRepository)
             : base(repository)
@@ -34,6 +37,7 @@ namespace MediHub.Touchee.Tasks
             Logger = NullLogger.Instance;
 
             _cacheManager = cacheManager;
+            
 
         }
 
@@ -125,6 +129,18 @@ namespace MediHub.Touchee.Tasks
             return value;
         }
 
-      
+        public async Task<string> SendEmail()
+        {
+            try
+            {
+                var emailSender = new EmailSender();
+                await emailSender.SendEmailAsync("minh.tran@medihub.com.vn","Test...","<p> Hoan Thanh...<br/> OK </p>");
+                return await System.Threading.Tasks.Task.FromResult("OK");
+            }
+            catch (Exception ex) {
+                return await System.Threading.Tasks.Task.FromResult(ex.Message);
+            }
+           
+        }
     }
 }

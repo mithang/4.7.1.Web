@@ -21,9 +21,11 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="2.2.0" />
     <PackageReference Include="Castle.Windsor.MsDependencyInjection" Version="3.3.1" />
+    <PackageReference Include="MailKit" Version="2.3.1.6" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Products\" />
     <Folder Include="Tasks\" />
+    <Folder Include="Emails\" />
   </ItemGroup>
 </Project>
