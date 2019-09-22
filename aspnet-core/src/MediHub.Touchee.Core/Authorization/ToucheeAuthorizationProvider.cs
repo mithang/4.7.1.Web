@@ -13,10 +13,16 @@ namespace MediHub.Touchee.Authorization
             context.CreatePermission(PermissionNames.Pages_Tenants, L("Tenants"), multiTenancySides: MultiTenancySides.Host);
 
             //minhtv: 18-09-2019
-            context.CreatePermission(PermissionNames.Pages_Categories, L("Categories"));
-            context.CreatePermission(PermissionNames.Pages_Categories_Add, L("Add Category"));
-            context.CreatePermission(PermissionNames.Pages_Categories_Delete, L("Delete Category"));
-            context.CreatePermission(PermissionNames.Pages_Categories_Edit, L("Edit Category"));
+            var categories = context.CreatePermission(PermissionNames.Pages_Categories, L("Categories"));
+
+            // context.RemovePermission(PermissionNames.Pages_Categories_Add);
+            //Tao permission level 2, co the tao nhieu level>2
+            categories.CreateChildPermission(PermissionNames.Pages_Categories_Add,L("AddCategory"));
+            categories.CreateChildPermission(PermissionNames.Pages_Categories_Delete,L("DeleteCategory"));
+            categories.CreateChildPermission(PermissionNames.Pages_Categories_Edit,L("EditCategory"));
+        
+
+        
 
             //minhtv: 19-09-2019
             context.CreatePermission(PermissionNames.Pages_Products, L("Products"));

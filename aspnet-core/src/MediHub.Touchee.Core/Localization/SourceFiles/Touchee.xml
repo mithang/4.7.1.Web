@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <localizationDictionary culture="en">
   <texts>
+    <text name="Categories" value="Chuyên mục" />
+    <text name="AddCategory" value="Thêm chuyên mục" />
+    <text name="EditCategory" value="Chỉnh sửa chuyên mục" />
+    <text name="DeleteCategory" value="Xoá chuyên mục" />
     <text name="Products" value="Products" />
     <text name="HomePage" value="Home page" />
     <text name="About" value="About" />
