@@ -22,6 +22,15 @@ namespace MediHub.Touchee.Web.Startup
                     )
                 ).AddItem(
                     new MenuItemDefinition(
+                        PageNames.Products,
+                        L("Products"),
+                        url: "Products",
+                        icon: "people",
+                        requiredPermissionName: PermissionNames.Pages_Products
+                    )
+                )
+                .AddItem(
+                    new MenuItemDefinition(
                         PageNames.Tenants,
                         L("Tenants"),
                         url: "Tenants",
