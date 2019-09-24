@@ -13,7 +13,7 @@ using MediHub.Touchee.Configuration;
 using MediHub.Touchee.Identity;
 using MediHub.Touchee.Web.Resources;
 using Abp.AspNetCore.SignalR.Hubs;
-
+using System.Threading.Tasks;
 
 namespace MediHub.Touchee.Web.Startup
 {
@@ -39,6 +39,32 @@ namespace MediHub.Touchee.Web.Startup
             services.AddScoped<IWebResourceManager, WebResourceManager>();
 
             services.AddSignalR();
+
+services.ConfigureApplicationCookie(options => {
+                //options.LoginPath = "/Account/Deny";
+                //options.AccessDeniedPath = "/Account/Deny";
+
+                options.Events.OnRedirectToLogin = context =>
+                {
+                    if (context.HttpContext?.User?.Identity?.IsAuthenticated == false)
+                    {
+                        //The user is not authenticated... Use the "oidc" challenge scheme 
+                        //and send them to identity server.
+                        //var task = context.HttpContext.ChallengeAsync("oidc");
+                        //task.WaitAndUnwrapException();
+                        context.Response.Redirect("/Account/Login");
+                        return Task.CompletedTask;
+                    }
+
+                    //var accessDeniedPath = BuildRedirectUri(context.HttpContext, options.AccessDeniedPath);
+
+                    context.Response.Redirect("/Account/Deny");
+                    context.Response.StatusCode = 302;
+
+                    return Task.CompletedTask;
+                };
+
+            });
 
             // Configure Abp and Dependency Injection
             return services.AddAbp<ToucheeWebMvcModule>(

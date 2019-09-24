@@ -1,0 +1,28 @@
+﻿@using Abp.Authorization.Users
+@using Abp.Extensions
+@using Abp.MultiTenancy
+@model MediHub.Touchee.Web.Models.Account.LoginFormViewModel
+@section Styles
+{
+    <environment names="Development">
+        <link rel="stylesheet" href="~/view-resources/Views/Account/Login.css" asp-append-version="true" />
+    </environment>
+
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="~/view-resources/Views/Account/Login.min.css" asp-append-version="true" />
+    </environment>
+
+}
+@section Scripts
+{
+    <environment names="Development">
+        <script src="~/view-resources/Views/Account/Login.js" asp-append-version="true"></script>
+    </environment>
+
+    <environment names="Staging,Production">
+        <script src="~/view-resources/Views/Account/Login.min.js" asp-append-version="true"></script>
+    </environment>
+}
+<div class="card" id="﻿LoginArea">
+    Ban ko co quyen truy cap
+</div>

@@ -458,5 +458,11 @@ namespace MediHub.Touchee.Web.Controllers
         }
 
         #endregion
+
+        //minhtv: 24/09/2019
+        public ActionResult Deny()
+        {
+            return View();
+        }
     }
 }
