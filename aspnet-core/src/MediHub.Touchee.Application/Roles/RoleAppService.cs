@@ -100,14 +100,14 @@ namespace MediHub.Touchee.Roles
         public Task<ListResultDto<PermissionDto>> GetAllPermissions()
         {
             var permissions = PermissionManager.GetAllPermissions();
-            var items = permissions.Select(op => new PermissionDto
-            {
+            //var items = permissions.Select(op => new PermissionDto
+            //{
                 
-                Name=op.Name,
-                DisplayName=op.DisplayName.ToString()
+            //    Name=op.Name,
+            //    DisplayName=op.DisplayName.ToString()
                 
-            });
-            //var items = ObjectMapper.Map<List<PermissionDto>>(permissions).OrderBy(p => p.Name).ToList();
+            //});
+            var items = ObjectMapper.Map<List<PermissionDto>>(permissions).OrderBy(p => p.Name).ToList();
             return Task.FromResult(new ListResultDto<PermissionDto>(items.ToList()));
         }
 
