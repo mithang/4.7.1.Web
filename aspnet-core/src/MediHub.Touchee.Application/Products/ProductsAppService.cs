@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Abp.Application.Services;
 using Abp.Application.Services.Dto;
 using Abp.Authorization;
@@ -39,25 +40,44 @@ namespace MediHub.Touchee.Products
         //     _productRepository.Insert(product);
         // }
 
-        private readonly IRepository<Product> _userRepository;
+        private readonly IRepository<Product> _productRepository;
         private readonly IObjectMapper _objectMapper;
 
-        public ProductsAppService(IRepository<Product> userRepository, IObjectMapper objectMapper)
+        public ProductsAppService(IRepository<Product> productRepository, IObjectMapper objectMapper)
         {
-            _userRepository = userRepository;
+            _productRepository = productRepository;
             _objectMapper = objectMapper;
         }
 
+        public ListResultDto<ProductDto> GetAllProduct()
+        {
+            var products = _productRepository.GetAllList();
+            var productdtos = ObjectMapper.Map<List<ProductDto>>(products);
+            return new ListResultDto<ProductDto>(productdtos);
+            
+        }
+        public ProductDto GetProduct(EntityDto<int> input)
+        {
+             var product = _productRepository.Get(input.Id);
+             var productDto = _objectMapper.Map<ProductDto>(product);
+             return productDto;
+        }
         public void CreateProduct(CreateProductDto input)
         {
             var user = _objectMapper.Map<Product>(input);
-            _userRepository.Insert(user);
+            _productRepository.Insert(user);
         }
 
         public void UpdateProduct(ProductDto input)
         {
-            var user = _userRepository.Get(input.Id);
+            var user = _productRepository.Get(input.Id);
             _objectMapper.Map(input, user);
+        }
+        
+        public void DeleteProduct(EntityDto<int> input)
+        {
+            _productRepository.Delete(input.Id);
+            
         }
     }
 }

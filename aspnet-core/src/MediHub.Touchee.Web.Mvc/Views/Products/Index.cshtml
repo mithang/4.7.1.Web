@@ -1,47 +1,22 @@
 ﻿@using MediHub.Touchee.Web.Startup
+@model Abp.Application.Services.Dto.ListResultDto<MediHub.Touchee.Products.Dto.ProductDto>
 @{
     ViewBag.CurrentPageName = PageNames.Home; // The menu item will be active for this page.
-}
-@section styles {
-    <link href="~/lib/morris.js/morris.css" rel="stylesheet" asp-append-version="true" />
 }
 @section scripts
     {
     <environment names="Development">
-        <script src="~/lib/jquery-countTo/jquery.countTo.js" asp-append-version="true"></script>
-        <script src="~/lib/raphael/raphael.js" asp-append-version="true"></script>
-        <script src="~/lib/morris.js/morris.js" asp-append-version="true"></script>
-        <script src="~/lib/chart.js/dist/Chart.bundle.js" asp-append-version="true"></script>
-        <script src="~/lib/Flot/jquery.flot.js" asp-append-version="true"></script>
-        <script src="~/lib/Flot/jquery.flot.resize.js" asp-append-version="true"></script>
-        <script src="~/lib/Flot/jquery.flot.pie.js" asp-append-version="true"></script>
-        <script src="~/lib/Flot/jquery.flot.categories.js" asp-append-version="true"></script>
-        <script src="~/lib/Flot/jquery.flot.time.js" asp-append-version="true"></script>
-        <script src="~/lib/jquery-sparkline/dist/jquery.sparkline.js" asp-append-version="true"></script>
-        <script src="~/view-resources/Views/Home/Index.js" asp-append-version="true"></script>
+        <script src="~/view-resources/Views/Products/Index.js" asp-append-version="true"></script>
     </environment>
 
     <environment names="Staging,Production">
-        <script src="~/view-resources/Views/_Bundles/home-index.min.js" asp-append-version="true"></script>
+        <script src="~/view-resources/Views/Products/Index.min.js" asp-append-version="true"></script>
     </environment>
 }
-<div class="block-header">
-    <h2>SAMPLE DASHBOARD</h2>
-</div>
 
 <!-- Widgets -->
 <div class="row clearfix">
-    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <div class="info-box bg-pink hover-expand-effect">
-            <div class="icon">
-                <i class="material-icons">playlist_add_check</i>
-            </div>
-            <div class="content">
-                <div class="text">NEW TASKS</div>
-                <div class="number count-to" data-from="0" data-to="125" data-speed="1000" data-fresh-interval="20"></div>
-            </div>
-        </div>
-    </div>
+
     <div class="col-xs-12">
         <a href="https://aspnetboilerplate.com/Pages/Documents/Authorization">Link authentication</a>
 
@@ -51,7 +26,114 @@
         {
             <button id="CreateNewUserButton" class="btn btn-primary"><i class="fa fa-plus"></i> CreateProduct</button>
         }
-            <a href="/Products/CreateProduct">CreateProduct</a>
+        <a href="/Products/CreateProduct">CreateProduct</a>
+
+
     </div>
 
+</div>
+
+<div class="row clearfix">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    @L("Products")
+                </h2>
+                <ul class="header-dropdown m-r--5">
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons">more_vert</i>
+                        </a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a id="RefreshButton" href="javascript:void(0);" class="waves-effect waves-block"><i class="material-icons">refresh</i>@L("Refresh")</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="body table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>@L("Name")</th>
+                            <th>@L("Quantity")</th>
+                            <th>@L("Actions")</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var product in Model.Items)
+                        {
+                            <tr>
+                                <td>@product.Name</td>
+                                <td>@product.Quantity</td>
+
+
+                                <td class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">menu</i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="#" class="waves-effect waves-block edit-user" data-user-id="@product.Id" data-toggle="modal" data-target="#EditProduct"><i class="material-icons">edit</i>@L("Edit")</a></li>
+                                        <li><a href="#" class="waves-effect waves-block delete-user" data-user-id="@product.Id" data-user-name="@product.Name"><i class="material-icons">delete_sweep</i>@L("Delete")</a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <button type="button" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right" data-toggle="modal" data-target="#AddProduct">
+                    <i class="material-icons">add</i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="AddProduct" tabindex="-1" role="dialog" aria-labelledby="UserCreateModalLabel" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    <span>@L("CreateNewProduct")</span>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form name="userCreateForm" role="form" novalidate class="form-validation">
+
+
+                    <div class="row clearfix">
+                        <div class="col-sm-6">
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input type="text" name="Name" class="form-control" required maxlength="10">
+                                    <label class="form-label">@L("Name")</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input type="text" name="Quantity" class="form-control" required maxlength="10">
+                                    <label class="form-label">@L("Quantity")</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">@L("Cancel")</button>
+                        <button type="submit" class="btn btn-primary waves-effect">@L("Save")</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="EditProduct" tabindex="-1" role="dialog" aria-labelledby="UserEditModalLabel" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+        </div>
+    </div>
 </div>

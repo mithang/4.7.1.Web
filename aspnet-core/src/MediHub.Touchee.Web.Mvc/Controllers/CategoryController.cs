@@ -13,7 +13,7 @@ namespace MediHub.Touchee.Web.Controllers
         public IActionResult Index()
         {
 
-            return View("1");
+            return View("monam");
         }
     }
 }

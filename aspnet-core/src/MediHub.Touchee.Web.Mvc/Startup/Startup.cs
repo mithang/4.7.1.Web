@@ -53,6 +53,9 @@ services.ConfigureApplicationCookie(options => {
                         //var task = context.HttpContext.ChallengeAsync("oidc");
                         //task.WaitAndUnwrapException();
                         context.Response.Redirect("/Account/Login");
+//                        var uri = new Uri("/Account/Login");
+//                        context.Response.Redirect(uri.AbsoluteUri);
+//                        context.Response.StatusCode = 403;
                         return Task.CompletedTask;
                     }
 
@@ -98,6 +101,7 @@ services.ConfigureApplicationCookie(options => {
             {
                 routes.MapHub<AbpCommonHub>("/signalr");
             });
+            
 
             app.UseMvc(routes =>
             {

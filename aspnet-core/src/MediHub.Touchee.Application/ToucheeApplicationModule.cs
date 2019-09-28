@@ -30,11 +30,18 @@ namespace MediHub.Touchee
 
         public override void PreInitialize()
         {
+            //Cau hinh dung automapper thay the cho objectmapper, phai co AbpAutoMapperModule
             Configuration.Modules.AbpAutoMapper().Configurators.Add(config =>
             {
                 config.CreateMap<CreateProductDto, Product>()
                         .ForMember(u => u.Name, options => options.MapFrom(input => input.Name))
                       .ForMember(u => u.Quantity, options => options.MapFrom(input => input.Quantity));
+
+                config.CreateMap<ProductDto, Product>()
+        .ForMember(u => u.Name, options => options.MapFrom(input => input.Name))
+      .ForMember(u => u.Quantity, options => options.MapFrom(input => input.Quantity));
+
+
             });
 
             

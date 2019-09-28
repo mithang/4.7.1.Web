@@ -4,7 +4,7 @@ using Abp.AutoMapper;
 
 namespace MediHub.Touchee.Products.Dto
 {
-    [AutoMapTo(typeof(Product))]
+    [AutoMapFrom(typeof(Product))]
     public class ProductDto:EntityDto<int>
     {
         public string Name { get; set; }

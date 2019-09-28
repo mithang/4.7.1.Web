@@ -6,6 +6,9 @@
     <text name="EditCategory" value="Chỉnh sửa chuyên mục" />
     <text name="DeleteCategory" value="Xoá chuyên mục" />
     <text name="Products" value="Products" />
+    <text name="CreateNewProduct" value="Create new product" />
+    <text name="Quantity" value="Quantity" />
+        
     <text name="HomePage" value="Home page" />
     <text name="About" value="About" />
     <text name="WelcomeMessage" value="Welcome to Touchee!" />

@@ -54,4 +54,11 @@
   <ItemGroup>
     <Folder Include="wwwroot\view-resources\Views\_Bundles\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\view-resources\Views\Users\Users\Index.js" />
+    <Content Remove="wwwroot\view-resources\Views\Users\Users\Index.min.js" />
+    <Content Remove="wwwroot\view-resources\Views\Users %28copy%29\Index.js" />
+    <Content Remove="wwwroot\view-resources\Views\Users %28copy%29\Index.min.js" />
+    <Content Remove="wwwroot\view-resources\Views\Users %28copy%29\Users\_EditUserModal.js" />
+  </ItemGroup>
 </Project>
