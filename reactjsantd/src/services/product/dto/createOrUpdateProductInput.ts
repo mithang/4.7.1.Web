@@ -1,10 +1,6 @@
 export interface CreateOrUpdateProductInput {
-  userName: string;
+  
   name: string;
-  surname: string;
-  emailAddress: string;
-  isActive: boolean;
-  roleNames: string[];
-  password: string;
+  displayName: string;
   id: number;
 }

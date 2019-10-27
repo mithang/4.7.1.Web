@@ -1,0 +1,65 @@
+@page "/demolist/{custId}"
+@using MediHub.Dashboard.Blazor.Data
+@using Microsoft.AspNetCore.Components
+@inject WeatherForecastService ForecastService
+
+<a href="/Counter">Counter</a>
+
+@custId
+
+<DxDataGrid Data="@forecasts" ShowFilterRow=false @bind-SingleSelectedDataRow="@selectedForecast" @ref="MyGrid"
+RowRemoving=@((dataItem) => OnRowRemoving(dataItem))
+RowUpdating=@((updatingDataItem, newValues) => OnRowUpdating(updatingDataItem, newValues))
+            PageSize="2">
+    <DxDataGridCommandColumn Width="150px"></DxDataGridCommandColumn>
+    <DxDataGridColumn Field="@nameof(WeatherForecast.TemperatureC)" Caption="Temp. (C)" TextAlignment="@DataGridTextAlign.Right"></DxDataGridColumn>
+    <DxDataGridSpinEditColumn Field="@nameof(WeatherForecast.TemperatureF)" Caption="Temp. (F)"></DxDataGridSpinEditColumn>
+    <DxDataGridComboBoxColumn Field="@nameof(WeatherForecast.Summary)" Caption="Summary" Data="@summaries"></DxDataGridComboBoxColumn>
+    <DxDataGridDateEditColumn Field="@nameof(WeatherForecast.Date)" DisplayFormatString="D" EditFormatString="d"></DxDataGridDateEditColumn>
+</DxDataGrid>
+
+
+@code{
+
+    [Parameter]
+    public string custId { get; set; } = "kkj";
+    WeatherForecast[] forecasts;
+    string[] summaries;
+    WeatherForecast selectedForecast;
+    DevExpress.Blazor.DxDataGrid<WeatherForecast> MyGrid;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+        summaries = WeatherForecastService.Summaries;
+        
+    }
+
+    void OnRowRemoving(WeatherForecast i)
+    {
+        
+    }
+    
+    void Edit() {
+        if (selectedForecast != null) {
+            MyGrid.StartRowEdit(selectedForecast);
+        }
+    }
+
+    void OnRowInserting(WeatherForecast dataItem, Dictionary<string, object> newValue)
+    {
+        
+    }
+    async void OnRowUpdating(WeatherForecast dataItem, Dictionary<string, object> newValue) {
+        //forecasts = await ForecastService.Update(dataItem, newValue);
+        await InvokeAsync(StateHasChanged);
+    }
+
+    async void Delete() {
+        if (selectedForecast != null) {
+            //forecasts = await ForecastService.Remove(selectedForecast);
+            await InvokeAsync(StateHasChanged);
+        }
+    }
+
+}

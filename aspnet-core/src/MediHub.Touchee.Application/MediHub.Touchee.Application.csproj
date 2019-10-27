@@ -21,6 +21,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Abp.RedisCache" Version="4.8.1" />
+    <PackageReference Include="LazZiya.ImageResize" Version="2.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
   </ItemGroup>
 </Project>

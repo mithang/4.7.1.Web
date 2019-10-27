@@ -1,0 +1,47 @@
+﻿@page "/edit/{id}"
+@using MediHub.Dashboard.Blazor.Services
+@using MediHub.Dashboard.Blazor.ViewModels
+@using Microsoft.AspNetCore.Components
+@inject DataService DataService
+<h1>
+Sản phẩm:
+</h1>
+
+@_product.name
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Tên sản phấm</label>
+    <input type="text" value="@_product.name" class="form-control" placeholder="Input Name...">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Số lượng</label>
+    <input type="number" value="@_product.quantity" class="form-control" placeholder="Input Quantity...">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Save</button><a href="/rolelist" class="btn btn-dark">Quay lại</a>
+</form>
+
+    @code{
+        [Parameter]
+        public string id { get; set; }
+        public Product _product =new Product();
+
+        private void HandleValidSubmit()
+        {
+            Console.WriteLine("OnValidSubmit");
+        }
+
+        protected override async Task OnInitializedAsync()
+        {
+            
+            id = id??"0";
+            var k = await DataService.GetProductById( int.Parse(id));
+            _product = k.result;
+        }
+
+       
+    }

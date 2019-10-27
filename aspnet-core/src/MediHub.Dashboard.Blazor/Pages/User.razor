@@ -1,0 +1,28 @@
+﻿@* @layout UserLayout *@
+@* @page "/User/{name}" *@
+@* @using MediHub.Dashboard.Blazor.Services *@
+@* @using MediHub.Dashboard.Blazor.ViewModels *@
+@* @using Microsoft.AspNetCore.Components *@
+@* @inject DataService data *@
+@* *@
+@* <h2>User Rays</h2> *@
+@* *@
+@* @foreach (var ray in Rays) *@
+@* { *@
+@*     <p> *@
+@*         <RayItem ray="@ray" /> *@
+@*     </p> *@
+@* *@
+@* } *@
+@* @functions { *@
+@*     [Parameter] *@
+@*     public string Name { get; set; } *@
+@* *@
+@*     List<Ray> Rays = new List<Ray>(); *@
+@* *@
+@*     protected override async Task OnParametersSetAsync() *@
+@*     { *@
+@*         Rays = await data.GetUserRays(Name); *@
+@* *@
+@*     } *@
+@* } *@

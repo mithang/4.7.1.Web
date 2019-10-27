@@ -1,0 +1,23 @@
+﻿@page "/settings"
+@using MediHub.Dashboard.Blazor.Services
+@inject DataService data
+
+<span>Username</span>
+<div class="input-group">
+    <input bind=name class="form-control" />
+    <div class="input-group-append">
+        <button onclick="(() => data.GetOrCreateUser(name))" type="button" class="btn btn-outline-secondary">Update</button>
+    </div>
+</div>
+<AnimatedBeam />
+
+@functions{
+    private string name = "";
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        name = data.CurrentUser.Name;
+    }
+
+}

@@ -13,6 +13,7 @@ import _ from "lodash";
 import * as Yup from 'yup';
 import { InjectedFormikProps, withFormik } from 'formik';
 
+// import {CreateOrUpdateProductInput} from './../../services/product/dto/createOrUpdateProductInput';
 // declare var abp: any;
 
 
@@ -28,6 +29,7 @@ export interface IProductState {
     filter: string;
     name: string;
     displayName: string;
+    id:0
 
 }
 
@@ -47,13 +49,15 @@ class Product extends AppComponentBase<InjectedFormikProps<IProductProps, IProdu
         roleId: 0,
         filter: '',
         name: "",
-        displayName: ""
+        displayName: "",
+        id:0
+        // submitProduct: this.handleCreate
     };
 
     async componentDidMount() {
-        
+
         await this.getAll();
-       
+
     }
 
     async getAll() {
@@ -67,16 +71,16 @@ class Product extends AppComponentBase<InjectedFormikProps<IProductProps, IProdu
     };
 
     async createOrUpdateModalOpen(entityDto: EntityDto) {
-    
+
         this.props.resetForm();
         if (entityDto.id === 0) {
-          //this.props.productStore.createRole();
-          //await this.props.productStore.getAllPermissions();
+
+            //await this.props.productStore.getAllPermissions();
         } else {
             //Chạy hàm để lấy dữ liệu từ api, sau đó set vào this.props.productStore.productEdit
             await this.props.productStore.getProduct(entityDto);
-          
-            this.props.setFieldValue("name", this.props.productStore.productEdit.name);  
+            this.props.setFieldValue("name", this.props.productStore.productEdit.name);
+            this.props.setFieldValue("id", this.props.productStore.productEdit.id);
         }
         
         this.Modal();
@@ -97,30 +101,68 @@ class Product extends AppComponentBase<InjectedFormikProps<IProductProps, IProdu
         this.setState({ filter: value }, async () => await this.getAll());
     };
 
-    handleCreate = () => {
-
-        const form = this.formRef.props.form;
+    handleCreate = async () => {
         
-        form.validateFields(async (err: any, values: any) => {
-            if (err) {
-                return;
-            } else {
-                if (this.state.roleId === 0) {
-                    //await this.props.productStore.create(values);
-                } else {
-                    //await this.props.productStore.update({ id: this.state.roleId, ...values });
-                }
-            }
+        
+        try {
+            // var createOrUpdateProductInput = new CreateOrUpdateProductInput()
+            if (this.props.values.id === 0) {
 
+                await this.props.productStore.create({
+                    name: this.props.values.name,
+                    displayName: this.props.values.displayName,
+                    id: 0
+                });
+            }else{
+                await this.props.productStore.update({
+                    name: this.props.values.name,
+                    displayName: this.props.values.displayName,
+                    id: 0
+                });
+            }
+           
             await this.getAll();
-            this.setState({ modalVisible: false });
-            form.resetFields();
-        });
+            this.Modal();
+
+        } catch (e) {
+            console.log(e);
+        }
+        
+
+        // const form = this.formRef.props.form;
+
+        // form.validateFields(async (err: any, values: any) => {
+        //     if (err) {
+        //         return;
+        //     } else {
+        //         if (this.state.roleId === 0) {
+        //             //await this.props.productStore.create(values);
+        //         } else {
+        //             //await this.props.productStore.update({ id: this.state.roleId, ...values });
+        //         }
+        //     }
+
+        //     await this.getAll();
+        //     this.setState({ modalVisible: false });
+        //     form.resetFields();
+        // });
     };
 
     render() {
 
+
+        
+        
+
         const { products } = this.props.productStore;
+
+        console.log("pageSize: "+this.state.maxResultCount);
+        console.log("total: "+(products === undefined ? 0 : products.totalCount));
+        if(products!==undefined){
+            console.log(products.items);
+        }
+        
+
         const columns = [
             { title: L('RoleName'), dataIndex: 'name', key: 'name', width: 150, render: (text: string) => <div>{text}</div> },
             { title: L('DisplayName'), dataIndex: 'displayName', key: 'displayName', width: 150, render: (text: string) => <div>{text}</div> },
@@ -209,14 +251,14 @@ class Product extends AppComponentBase<InjectedFormikProps<IProductProps, IProdu
                         this.Modal()
                     }
                     title={L('Products')}
-                    onOk={this.props.handleSubmit}
-                    // disabled={this.props.isSubmitting}
+                    onOk={this.handleCreate}
+                // disabled={this.props.isSubmitting}
                 >
 
                     <form onSubmit={
                         this.props.handleSubmit
                         // this.handleCreate
-                        }>
+                    }>
 
                         <FormItem label={L('name')} >
                             <Input id="name"
@@ -247,30 +289,33 @@ class Product extends AppComponentBase<InjectedFormikProps<IProductProps, IProdu
 
     }
 }
-export default withFormik<IProductProps,IProductState>(
+export default withFormik<IProductProps, IProductState>(
     {
         mapPropsToValues: (props) => {
-            console.log(props);
+            
             return ({
-            modalVisible: false,
-            maxResultCount: 10,
-            skipCount: 0,
-            roleId: 0,
-            filter: "",
-            name: "",
-            displayName: ""
-        })},
+                modalVisible: false,
+                maxResultCount: 10,
+                skipCount: 0,
+                roleId: 0,
+                filter: "",
+                name: "",
+                displayName: "",
+                id:0
+            })
+        },
         mapPropsToStatus: (states) => {
-            console.log(states);
+            
             return ({
-            modalVisible: false,
-            maxResultCount: 10,
-            skipCount: 0,
-            roleId: 0,
-            filter: "",
-            name: "",
-            displayName: ""
-        })},
+                modalVisible: false,
+                maxResultCount: 10,
+                skipCount: 0,
+                roleId: 0,
+                filter: "",
+                name: "",
+                displayName: ""
+            })
+        },
         // enableReinitialize: true,
         validationSchema: Yup.object().shape({
             name: Yup.string()
@@ -281,16 +326,12 @@ export default withFormik<IProductProps,IProductState>(
                 .required('Mô tả không để trống'),
         },
         ),
-        handleSubmit: (values, { setSubmitting }) => {
-            
-            setTimeout(
-                () => {
-                    alert(JSON.stringify(values, null, 2));
-                    setSubmitting(false);
-                },
-                1000,
-            );
-        },
+        handleSubmit: (values, { setSubmitting, props }) => {
+            //console.log(values);
+            //this.handleCreate(values)
+            // console.log(props);
+
+        }
     }
 )(Product);
 

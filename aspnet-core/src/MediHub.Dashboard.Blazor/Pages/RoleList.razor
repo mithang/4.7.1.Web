@@ -1,0 +1,97 @@
+﻿@page "/rolelist"
+
+@inject HttpClient Http
+
+@using System.Net.Http.Headers
+@using JW
+@using MediHub.Dashboard.Blazor.Services
+@using MediHub.Dashboard.Blazor.ViewModels
+@using Microsoft.AspNetCore.Components
+@inject DataService DataService
+@using Microsoft.AspNetCore.Components.Web
+
+
+<h1>Quản lí sản phẩm</h1>
+
+<p>Tổng: 100 sản phẩm</p>
+
+@if (forecasts == null)
+{
+    <p><em>Loading...</em></p>
+ 
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Tên sản phẩm</th>
+                <th>Số lượng</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+              @foreach (var forecast in forecasts.result.items)
+              {
+                  <tr>
+                      <td>@forecast.name</td>
+                      <td>@forecast.quantity</td>
+
+                      <td>
+                        <a class="btn btn-primary" href="/edit/@forecast.id">Chỉnh sửa</a>
+                        <a class="btn btn-danger" href="/delete/@forecast.id">Xoá</a>
+                      </td>
+                  </tr>
+             }
+        </tbody>
+    </table>
+    
+   
+    
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item">
+                <a style="cursor: pointer" class="page-link" aria-label="Previous" @onclick="@(()=>PageChanged(1))">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+     @foreach (var index in pager.Pages)
+    {
+        <li class="page-item @renderActive(@index)"><a style="cursor: pointer" class="page-link" @onclick="@(()=>PageChanged(@index))" >@index</a></li>
+    }
+           
+           
+            <li class="page-item">
+                <a style="cursor: pointer" class="page-link" @onclick="@(()=>PageChanged(pager.TotalPages))" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+}
+
+
+@code {
+    Todo forecast;
+    ProductDto forecasts;
+    
+    Pager pager = new Pager(totalItems: 150,currentPage:1,pageSize:10,maxPages:5);
+
+    protected void PageChanged(int index)
+    {
+        pager= new Pager(totalItems: 150,currentPage:index,pageSize:10,maxPages:5);
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        forecasts = await DataService.GetProducts();
+        //Toastr.Show(ToastrType.Success, "This is a success message", "Title");
+    }
+
+    public string renderActive(int index)
+    {
+        return pager.CurrentPage == index ? "active" : "";
+    }
+    
+
+}

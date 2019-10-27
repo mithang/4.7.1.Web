@@ -12,9 +12,19 @@ class ProductStore {
   @observable productEdit!: CreateOrUpdateProductInput;
 
   @action
-  async create() {
-    console.log("OK");
+  async create(createProductInput: CreateOrUpdateProductInput) {
+    let result = await productService.create(createProductInput);
+    this.products.items.push(result);
   }
+  @action
+  async update(updateUserInput: CreateOrUpdateProductInput) {
+    let result = await productService.update(updateUserInput);
+    this.products.items = this.products.items.map((x: GetAllProductOutput) => {
+      if (x.id === updateUserInput.id) x = result;
+      return x;
+    });
+  }
+
   @action
   async getProductsAsync(getProductAsyncInput: GetProductAsyncInput) {
     await productService.getProductsAsync(getProductAsyncInput);

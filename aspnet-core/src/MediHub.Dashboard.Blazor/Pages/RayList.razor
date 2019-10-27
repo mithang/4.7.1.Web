@@ -1,0 +1,37 @@
+﻿@* @page "/frequency/{id}" *@
+@* @using MediHub.Dashboard.Blazor.Services *@
+@* @using Microsoft.AspNetCore.Components *@
+@* @inject DataService data *@
+@* *@
+@* *@
+@* <RayInput bind-newRayText="@newRayText" /> *@
+@* @foreach (var ray in data.Rays) *@
+@* { *@
+@*     <p> *@
+@*         <RayItem ray="@ray" /> *@
+@*     </p> *@
+@* } *@
+@* *@
+@* *@
+@* @functions{ *@
+@*     [Parameter] *@
+@*     public string Id { get; set; } *@
+@* *@
+@*     public string newRayText { get; set; } *@
+@* *@
+@*     protected override void OnParametersSet() *@
+@*     { *@
+@*         data.UpdatedRays += StateHasChanged; *@
+@*         data.UpdatedRays += UpdateNewRayText; *@
+@*         data.SelectedFrequency = Int32.Parse(Id); *@
+@* *@
+@*     } *@
+@* *@
+@*     void UpdateNewRayText() *@
+@*     { *@
+@*         if (!data.Rays.Any(r => r.UserName == data.CurrentUser.Name)) *@
+@*             newRayText = $"Hello, My Name is {data.CurrentUser.Name}"; *@
+@*     } *@
+@* *@
+@*      *@
+@* } *@

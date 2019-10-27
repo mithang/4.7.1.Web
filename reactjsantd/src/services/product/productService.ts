@@ -14,20 +14,19 @@ import { PagedProductResultRequestDto } from './dto/PagedProductResultRequestDto
 import http from '../httpService';
 
 class ProductService {
-  // public async create(createRoleInput: CreateRoleInput): Promise<PagedResultDto<CreateRoleOutput>> {
-  //   let result = await http.post('api/services/app/Role/Create', createRoleInput);
-  //   return result.data.result;
-  // }
-
+  public async create(createProductInput: CreateOrUpdateProductInput) {
+    let result = await http.post('api/services/app/Products/CreateProduct', createProductInput);
+    return result.data.result;
+  }
   public async getProductsAsync(getProductAsyncInput: GetProductAsyncInput): Promise<GetProductAsyncOutput> {
     let result = await http.get('api/services/app/Product/GetProductsAsync', { params: getProductAsyncInput });
     return result.data.result;
   }
 
-  // public async update(updateRoleInput: UpdateRoleInput): Promise<UpdateRoleOutput> {
-  //   let result = await http.put('api/services/app/Role/Update', updateRoleInput);
-  //   return result.data.result as UpdateRoleOutput;
-  // }
+  public async update(updateRoleInput: CreateOrUpdateProductInput): Promise<CreateOrUpdateProductInput> {
+    let result = await http.put('api/services/app/Products/UpdateProduct', updateRoleInput);
+    return result.data.result as CreateOrUpdateProductInput;
+  }
 
   public async delete(entityDto: EntityDto) {
     let result = await http.delete('api/services/app/Products/DeleteProduct', { params: entityDto });

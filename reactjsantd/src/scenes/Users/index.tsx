@@ -10,6 +10,7 @@ import { L } from '../../lib/abpUtility';
 import Stores from '../../stores/storeIdentifier';
 import UserStore from '../../stores/userStore';
 
+
 export interface IUserProps {
   userStore: UserStore;
 }
@@ -88,6 +89,7 @@ class User extends AppComponentBase<IUserProps, IUserState> {
     const form = this.formRef.props.form;
 
     form.validateFields(async (err: any, values: any) => {
+      console.log(values);
       if (err) {
         return;
       } else {

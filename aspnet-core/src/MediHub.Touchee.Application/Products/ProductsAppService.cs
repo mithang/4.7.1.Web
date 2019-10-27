@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using Abp.Application.Services;
 using Abp.Application.Services.Dto;
 using Abp.Authorization;
 using Abp.Domain.Repositories;
 using Abp.ObjectMapping;
+using LazZiya.ImageResize;
 using MediHub.Touchee.Authorization;
 using MediHub.Touchee.Products.Dto;
+using Microsoft.AspNetCore.Hosting;
 
 namespace MediHub.Touchee.Products
 {
@@ -18,7 +21,7 @@ namespace MediHub.Touchee.Products
     //    {
     //    }
     //}
-    [AbpAuthorize(PermissionNames.Pages_Products)]
+//    [AbpAuthorize(PermissionNames.Pages_Products)]
     public class ProductsAppService : ApplicationService
     {
 
@@ -42,11 +45,13 @@ namespace MediHub.Touchee.Products
 
         private readonly IRepository<Product> _productRepository;
         private readonly IObjectMapper _objectMapper;
+        private readonly IHostingEnvironment _env;
 
-        public ProductsAppService(IRepository<Product> productRepository, IObjectMapper objectMapper)
+        public ProductsAppService(IHostingEnvironment env,IRepository<Product> productRepository, IObjectMapper objectMapper)
         {
             _productRepository = productRepository;
             _objectMapper = objectMapper;
+            _env = env;
         }
 
         public ListResultDto<ProductDto> GetAllProduct()
@@ -78,6 +83,25 @@ namespace MediHub.Touchee.Products
         {
             _productRepository.Delete(input.Id);
             
+        }
+
+        public void ScareImage()
+        {
+            
+            //get image from local path
+            //var img = Image.FromFile(@"wwwroot\images\img.jpg");
+            var stream = _env.WebRootFileProvider.GetFileInfo("images/img.jpg").CreateReadStream();
+            var img = Image.FromStream(stream);
+            
+            //resize the image to 600x400 
+            var newImg = ImageResize.Scale(img, 600, 400);
+            
+            //save new image
+            newImg.SaveAs(_env.ContentRootPath+"\\wwwroot\\images\\600x400-scale.jpg");
+
+            //dispose to free up memory
+            img.Dispose();
+            newImg.Dispose();
         }
     }
 }
