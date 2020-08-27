@@ -3,45 +3,108 @@
 @using MediHub.Dashboard.Blazor.ViewModels
 @using Microsoft.AspNetCore.Components
 @inject DataService DataService
+
 <h1>
-Sản phẩm:
+Sản phẩm: @_product.name
 </h1>
 
-@_product.name
-<form>
+@* Model="@_product" *@
+@* OnValidSubmit="@HandleValidSubmit" OnInvalidSubmit="@HandleInvalidSubmit" *@
+@* EditContext="@EditContext"  *@
+<EditForm Model="@_product" OnValidSubmit="@HandleValidSubmit" OnInvalidSubmit="@HandleInvalidSubmit">    
+  <div class="alert @StatusClass">@StatusMessage</div>        
+  
+  <DataAnnotationsValidator />    
+  <ValidationSummary />        
+
   <div class="form-group">
     <label for="exampleInputEmail1">Tên sản phấm</label>
-    <input type="text" value="@_product.name" class="form-control" placeholder="Input Name...">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <input type="text" @bind="@_product.name" class="form-control" placeholder="Input Name..." />
+    <ValidationMessage class="form-text text-muted text-danger" For="@(() => _product.name)" />  
+    
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Số lượng</label>
-    <input type="number" value="@_product.quantity" class="form-control" placeholder="Input Quantity...">
+    <input type="number" @bind="@_product.quantity" class="form-control" placeholder="Input Quantity..."/>
+    <ValidationMessage class="form-text text-muted text-danger" For="@(() => _product.quantity)" /> 
   </div>
   <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input">
+    <input type="checkbox" class="form-check-input"/>
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
-  <button type="submit" class="btn btn-primary">Save</button><a href="/rolelist" class="btn btn-dark">Quay lại</a>
-</form>
+@* disabled="@OkayDisabled" *@
+  <button  type="submit" class="btn btn-primary">Save</button>
+  <a href="/rolelist" class="btn btn-dark">Quay lại</a>
+
+</EditForm> 
+
 
     @code{
+        //https://dzone.com/articles/blazor-form-validation
         [Parameter]
-        public string id { get; set; }
+        public string id { get; set; } = "0";
+        
+        private string StatusMessage;    
+        private string StatusClass;     
+        private EditContext EditContext;    
+        protected string OkayDisabled { get; set; } = "disabled";   
+        
         public Product _product =new Product();
-
-        private void HandleValidSubmit()
-        {
-            Console.WriteLine("OnValidSubmit");
-        }
-
+        
         protected override async Task OnInitializedAsync()
         {
-            
-            id = id??"0";
+//            EditContext = new EditContext(_product);        
+//            EditContext.OnFieldChanged += EditContext_OnFieldChanged;
+//            base.OnInitializedAsync();
             var k = await DataService.GetProductById( int.Parse(id));
             _product = k.result;
+            
         }
-
+        //Excute when form valid
+        protected void HandleValidSubmit()    
+        {        
+            StatusClass = "alert-info";        
+            StatusMessage = DateTime.Now + " Handle valid submit";    
+        }     
+        //Excute when form invalid
+        protected void HandleInvalidSubmit()    
+        {        
+            StatusClass = "alert-danger";        
+            StatusMessage = DateTime.Now + " Handle invalid submit";    
+        }
        
+//        protected override void OnAfterRender(bool firstRender)
+//        {
+//            base.OnAfterRender(firstRender);
+//            //SetOkDisabledStatus();
+//        }
+        
+          
+//        private void EditContext_OnFieldChanged(object sender, FieldChangedEventArgs e)    
+//        {        
+//            SetOkDisabledStatus();    
+//        }     
+//          
+//        private void SetOkDisabledStatus()    
+//        {        
+//            if(EditContext.Validate())        
+//            {            
+//                OkayDisabled = null;        
+//            }        
+//            else        
+//            {            
+//                OkayDisabled = "disabled";        
+//            }    
+//        }
+//       
+//        void KeyUp(KeyboardEventArgs e, string memberName)    
+//        {        
+//            var property = _product.GetType().GetProperty(memberName);        
+//            var value = property.GetValue(_product);        
+//            property.SetValue(_product, value + e.Key);         
+//          
+//            var id = EditContext.Field(memberName);         
+//          
+//            EditContext.NotifyFieldChanged(id);    
+//        }   
     }
