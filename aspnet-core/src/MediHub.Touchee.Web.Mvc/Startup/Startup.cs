@@ -52,7 +52,7 @@ services.ConfigureApplicationCookie(options => {
                         //and send them to identity server.
                         //var task = context.HttpContext.ChallengeAsync("oidc");
                         //task.WaitAndUnwrapException();
-                        context.Response.Redirect("/Account/Login");
+                        context.Response.Redirect("/Account/Login");
 //                        var uri = new Uri("/Account/Login");
 //                        context.Response.Redirect(uri.AbsoluteUri);
 //                        context.Response.StatusCode = 403;

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MediHub.Touchee.Migrations
 {
     [DbContext(typeof(ToucheeDbContext))]
-    [Migration("20190918075222_addpermissioncategories")]
-    partial class addpermissioncategories
+    [Migration("20200827143543_EditPropertiesProduct")]
+    partial class EditPropertiesProduct
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -1084,6 +1084,58 @@ namespace MediHub.Touchee.Migrations
                     b.HasIndex("TenancyName");
 
                     b.ToTable("AbpTenants");
+                });
+
+            modelBuilder.Entity("MediHub.Touchee.Products.Product", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Assignment");
+
+                    b.Property<DateTime>("Checkin");
+
+                    b.Property<DateTime>("Checkout");
+
+                    b.Property<string>("Difficulty");
+
+                    b.Property<DateTime>("ExpectedCheckout");
+
+                    b.Property<string>("ExpectedDuration");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("OfftimeOverage");
+
+                    b.Property<bool>("Overtime");
+
+                    b.Property<float>("PercentilePerformance");
+
+                    b.Property<string>("ProjectName");
+
+                    b.Property<string>("UrgentLevel");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("MediHub.Touchee.Tasks.Task", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("Title");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tasks");
                 });
 
             modelBuilder.Entity("Abp.Application.Features.EditionFeatureSetting", b =>

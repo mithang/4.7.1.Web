@@ -35,11 +35,12 @@ namespace MediHub.Touchee
             {
                 config.CreateMap<CreateProductDto, Product>()
                         .ForMember(u => u.Name, options => options.MapFrom(input => input.Name))
-                      .ForMember(u => u.Quantity, options => options.MapFrom(input => input.Quantity));
+                      .ForMember(u => u.Assignment, options => options.MapFrom(input => input.Assignment)
+                        );
 
                 config.CreateMap<ProductDto, Product>()
         .ForMember(u => u.Name, options => options.MapFrom(input => input.Name))
-      .ForMember(u => u.Quantity, options => options.MapFrom(input => input.Quantity));
+      .ForMember(u => u.Assignment, options => options.MapFrom(input => input.Assignment));
 
 
             });

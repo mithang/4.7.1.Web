@@ -1090,9 +1090,29 @@ namespace MediHub.Touchee.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Assignment");
+
+                    b.Property<DateTime>("Checkin");
+
+                    b.Property<DateTime>("Checkout");
+
+                    b.Property<string>("Difficulty");
+
+                    b.Property<DateTime>("ExpectedCheckout");
+
+                    b.Property<string>("ExpectedDuration");
+
                     b.Property<string>("Name");
 
-                    b.Property<int>("Quantity");
+                    b.Property<string>("OfftimeOverage");
+
+                    b.Property<bool>("Overtime");
+
+                    b.Property<float>("PercentilePerformance");
+
+                    b.Property<string>("ProjectName");
+
+                    b.Property<string>("UrgentLevel");
 
                     b.HasKey("Id");
 

@@ -5,10 +5,23 @@ using MediHub.Touchee.Authorization.Users;
 
 namespace MediHub.Touchee.Products
 {
+    												
     public class Product : Entity<int>
     {
         public string Name { get; set; }
-        public int Quantity { get; set; }
+        public string Assignment { get; set; }
+        public string ProjectName { get; set; }
+        public string Difficulty { get; set; }
+        public string UrgentLevel { get; set; }
+        public DateTime Checkin { get; set; }
+        public DateTime ExpectedCheckout { get; set; }
+        public string ExpectedDuration { get; set; }
+        public DateTime Checkout { get; set; }
+        public string OfftimeOverage { get; set; }
+        public bool Overtime { get; set; }
+        public float PercentilePerformance { get; set; }
+        
+        //ProjectID
     }
 
     //Khong dung IFullAudited trong entity nay

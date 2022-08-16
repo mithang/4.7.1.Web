@@ -49,7 +49,10 @@ namespace MediHub.Touchee.Tasks
 
         public void CreateTaskAndProduct(CreateProductDto input)
         {
-            var product = new Product { Name = input.Name, Quantity = input.Quantity };
+//            var product = new Product { 
+//                Name = input.Name, 
+//                Quantity = input.Quantity 
+//            };
             var task = new Task {
                 Title="T2",
                 Description="t2"
@@ -57,7 +60,7 @@ namespace MediHub.Touchee.Tasks
 
             using (var unitOfWork = _unitOfWorkManager.Begin())
             {
-                _productRepository.Insert(product);
+                //_productRepository.Insert(product);
                 //throw new Exception("loi"); Test Transaction
                 _taskRepository.Insert(task);
                 Logger.Info("GHI LOG -> CreateTaskAndProduct: " + input.Name);
