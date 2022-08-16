@@ -17,3 +17,6 @@ https://aspnetboilerplate.com/Pages/Documents/EF-Core-PostgreSql-Integration
 
 5. Để thêm quyền vào file ToucheeAuthorizationProvider, PermissionNames. Mặc định khi chạy nó sẽ tự thêm vào AbpPermissions và chỉ định role cho admin
 Các role khác phải thêm bằng api hoặc cms
+
+6. Cài redis vi project dang dung
+docker run -p 6379:6379 -d redis
